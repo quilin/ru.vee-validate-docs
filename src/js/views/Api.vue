@@ -20,8 +20,8 @@
         </p>
         <p>
             <b class="important">Available Methods:</b>
-            <ul>
-                <li><code class="inline">add(object error)</code> adds an error object to the internal array.</li>
+            <ul class="list-circle">
+                <li><code class="inline">add(String field, String msg)</code> adds an error object to the internal array.</li>
                 <li><code class="inline">all()</code> Gets all messages from the internal array.</li>
                 <li><code class="inline">any()</code> Checks if there are any errors.</li>
                 <li><code class="inline">clear()</code> Removes all items from the internal array.</li>
@@ -31,6 +31,9 @@
                 <li><code class="inline">has(String field)</code> Checks if there is at least one error associated with the specified field.</li>
                 <li><code class="inline">remove(String field)</code> Removes all errors for a specified field from the internal array.</li>
             </ul>
+            <note>
+                All of the methods above accept an optional <code>scope</code> parameter which will limit the method effect to a specific scope. You can read more about scopes <router-link :to="{ name: 'examples', hash: '#scope-example' }">here</router-link>.
+            </note>
         </p>
         <h2 id="validator" class="title is-4"><a href="#validator">Validator</a></h2>
         <p>
