@@ -59,7 +59,7 @@
                     return {
                         email: '',
                         name: '',
-                        errors: []
+                        errors: null
                     }
                 },
                 watch: {
@@ -101,7 +101,7 @@ export default {
     data: () => ({
         email: '',
         name: '',
-        errors: []
+        errors: null
     }),
     watch: {
         email(value) {
