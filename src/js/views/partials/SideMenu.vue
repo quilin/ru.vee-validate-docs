@@ -1,6 +1,6 @@
 <template>
     <aside class="menu sidebar">
-        <a class="github-button" href="https://github.com/logaretm/vee-validate" data-icon="octicon-star" data-style="mega" data-count-href="/logaretm/vee-validate/stargazers" data-count-api="/repos/logaretm/vee-validate#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star logaretm/vee-validate on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/logaretm/vee-validate" data-vv-icon="octicon-star" data-vv-style="mega" data-vv-count-href="/logaretm/vee-validate/stargazers" data-vv-count-api="/repos/logaretm/vee-validate#stargazers_count" data-vv-count-aria-label="# stargazers on GitHub" aria-label="Star logaretm/vee-validate on GitHub">Star</a>
         <p class="menu-label">
             Getting Started
         </p>
@@ -35,9 +35,9 @@
         <ul class="menu-list">
             <li><router-link active-class="is-active" :to="{ name: 'localization', hash: '#translation'}">Translation</router-link></li>
             <li>
-                <router-link active-class="is-active" :to="{ name: 'localization', hash: '#attributes-data-as'}">Attributes</router-link>
+                <router-link active-class="is-active" :to="{ name: 'localization', hash: '#attributes-data-vv-as'}">Attributes</router-link>
                 <ul>
-                    <li><router-link active-class="is-active" :to="{ name: 'localization', hash: '#attributes-data-as'}">data-as</router-link></li>
+                    <li><router-link active-class="is-active" :to="{ name: 'localization', hash: '#attributes-data-vv-as'}">data-vv-as</router-link></li>
                     <li><router-link active-class="is-active" :to="{ name: 'localization', hash: '#attributes-dictionary'}">dictionary</router-link></li>
                 </ul>
             </li>
@@ -49,7 +49,7 @@
         <ul class="menu-list">
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#debounce-example'}">Debounce</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#reject-example'}">Reject Files</router-link></li>
-            <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#validate-data-example'}">Validating Expressions</router-link></li>
+            <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#validate-data-vv-example'}">Validating Expressions</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#validate-form'}">Form Validation</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#locale-example'}">Localized Messages</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#scope-example'}">Validation Scopes</router-link></li>

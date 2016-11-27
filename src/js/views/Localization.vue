@@ -7,22 +7,22 @@
             The <a href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en.js" class="link" target="github">English messages file</a> is an example on how you would structure those messages.
             Then you may want to update the validator dictionary, which should happen once in your app startup. still you may update them whenever you want in any point of your app, review the <router-link :to="{ name: 'rules', hash: '#custom-messages' }" class="link">custom messages</router-link> here.
         </p>
-        <h2 id="attributes-data-as" class="title is-4"><a href="#attributes-data-as">Attributes (data-as)</a></h2>
+        <h2 id="attributes-data-vv-as" class="title is-4"><a href="#attributes-data-vv-as">Attributes (data-vv-as)</a></h2>
         <p>
             Seeing 'first_name' in your error messages can't be very good for your user experience, this plugin offer a couple of solutions:
 
-            You can use the <code>data-as</code> attribute on your field and give it a better name for your users, it would look like this:
+            You can use the <code>data-vv-as</code> attribute on your field and give it a better name for your users, it would look like this:
             <code-block class="language-html">
-                &lt;input v-validate data-rules=&quot;alpha|min:3&quot; data-as=&quot;First Name&quot; name=&quot;first_name&quot; type=&quot;text&quot;&gt;
+                &lt;input v-validate data-vv-rules=&quot;alpha|min:3&quot; data-vv-as=&quot;First Name&quot; name=&quot;first_name&quot; type=&quot;text&quot;&gt;
             </code-block>
 
-            Now when any error message is generated for this input will use the <code>data-as</code> value instead of the actual field name. this is also the same for binding expressions.
+            Now when any error message is generated for this input will use the <code>data-vv-as</code> value instead of the actual field name. this is also the same for binding expressions.
             While this is very useful for simple setups and displaying localized names, you might want to check the approach below.
         </p>
         <h2 id="attributes-dictionary" class="title is-4"><a href="#attributes-dictionary">Attributes (Dictionary)</a></h2>
         <p>
             All validators have access to a simple dictionary that is shared between all of them, this dictionary contains localized error messages and attributes, if the validator finds a localized attribute name for that field it will be used instead of the field name.
-            Pretty much like <code>data-as</code> but <code>data-as</code> takes priorty if both are found.
+            Pretty much like <code>data-vv-as</code> but <code>data-vv-as</code> takes priorty if both are found.
         </p>
         <p>
             Here is a little code example on how would you add support for your localized messages and attributes. Note that this is the entry point of your application.

@@ -3,7 +3,7 @@
         <h2 id="debounce-example" class="title is-4"><a href="#debounce-example">Delayed Validation (Debounced)</a></h2>
         <p>
             You can specify a delay to debounce the input event, a case scenario that you may want to wait for the user to stop typing then validate the field.
-            This can be achieved by adding a <code class="inline">data-delay</code> attribute on the field being validated, and assign it the number of milliseconds you want to wait for.
+            This can be achieved by adding a <code class="inline">data-vv-delay</code> attribute on the field being validated, and assign it the number of milliseconds you want to wait for.
         </p>
         <delay-example></delay-example>
         <h2 id="reject-example" class="title is-4"><a href="#reject-example">Reject Invalid Files</a></h2>
@@ -15,14 +15,14 @@
             </note>
         </p>
         <reject-example></reject-example>
-        <h2 id="validate-data-example" class="title is-4"><a href="#validate-data-example">Validate $data</a></h2>
+        <h2 id="validate-data-vv-example" class="title is-4"><a href="#validate-data-vv-example">Validate $data</a></h2>
         <p>
             The basic approach relies on listening to the <code class="inline">input</code> or the <code class="inline">change</code> events depending on the file type.
             However most of the time, your values are bound to your Vue instance and some code may change their inputs programatically, the basic approach won't detect this change.
             <br><br>
             <b class="important">The Solution:</b> The <code class="inline">v-validate</code> directive can take a binding expression, the expression is the data name you wish to validate. for example:
             <code-block class="language-html">
-                &lt;input v-validate=&quot;email&quot; data-rules=&quot;required|email&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;
+                &lt;input v-validate=&quot;email&quot; data-vv-rules=&quot;required|email&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;
             </code-block>
             Whenever the binding value is updated, the validator will validate the new value automatically.
             <note>
@@ -30,7 +30,7 @@
                 And as you noticed, you don't need to provide a <code>name</code> attribute, as the expression name will be used instead.
             </note>
          </p>
-         <data-example></data-example>
+         <data-vv-example></data-vv-example>
          <p>
             <note>
                 Notice that the <code>email</code> field was immediatly validated when you open the page, you may not want this behavior, use the <code>initial</code> modifier to tell the validator to ignore the first evaluation like this: <code>v-validate.initial</code>.
@@ -52,7 +52,7 @@
          </p>
          <locale-example></locale-example>
          <note>
-             Here we are also seeing <code>data-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
+             Here we are also seeing <code>data-vv-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
              <br><br>Keep in mind that those pretty names are only used when generating error messages.
          </note>
          <h2 id="scope-example" class="title is-4"><a href="#scope-example">Scopes</a></h2>
@@ -60,9 +60,9 @@
             By default the scope of the validator is the same as the Vue instance that owns it, sometimes you may have multiple fields with the same name, they are in different forms and serve different purposes.
             The validator will then treat those two fields as the same field which will cause problems detecting the input and displaying the errors.
             <br><br>
-            You can tell the validator to scope the fields by adding a <code class="inline">data-scope</code> attribute which tells the validator the name of the scope. Those fields will be then identified using their name and their scope. allowing duplicate fields to exist within the same component.
+            You can tell the validator to scope the fields by adding a <code class="inline">data-vv-scope</code> attribute which tells the validator the name of the scope. Those fields will be then identified using their name and their scope. allowing duplicate fields to exist within the same component.
             <br><br>
-            For convienece you may add the <code class="inline">data-scope</code> on the form that owns the inputs, you don't have to add the attribute on each and every input.
+            For convienece you may add the <code class="inline">data-vv-scope</code> on the form that owns the inputs, you don't have to add the attribute on each and every input.
          </p>
          <scope-example></scope-example>
          <h2 id="coupon-example" class="title is-4"><a href="#coupon-example">Custom Rule: Coupon</a></h2>

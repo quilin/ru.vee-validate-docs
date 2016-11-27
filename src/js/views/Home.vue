@@ -52,17 +52,17 @@
         <p>
             All you need is to add the <code class="inline">v-validate</code> directive to the input you wish to validate.
             <br><br>
-            Then add a <code class="inline">data-rules</code> attribute which contains a list of validation rules separated by a pipe '<code class="inline">|</code>'.
+            Then add a <code class="inline">data-vv-rules</code> attribute which contains a list of validation rules separated by a pipe '<code class="inline">|</code>'.
             For the following example the validation rules are straight forward, use <code class="inline">required</code> to indicate that the field is required.
             And <code class="inline">email</code> to indicate that the field must be an email.
-            To combine both rules we assign the value <code class="inline">required|email</code> to the <code class="inline">data-rules</code> data-set attribute.
+            To combine both rules we assign the value <code class="inline">required|email</code> to the <code class="inline">data-vv-rules</code> data-vv-set attribute.
         </p>
         <basic-example></basic-example>
         <div class="flex-center"><router-link class="link" :to="{ name: 'examples' }">More Examples</router-link></div>
         <br>
         <note title="Note">
             The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
-            The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-example' }">data validation example</router-link>.
+            The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-vv-example' }">data validation example</router-link>.
         </note>
         <note>
             Its always a good idea to have a <code>name</code> attribute on your fields. If you are not binding the field and do not have a name attribute the validator won't properly register the field.

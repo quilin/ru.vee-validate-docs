@@ -54,7 +54,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="date_format:DD/MM/YYYY|after:after_field_target" :class="{'input': true, 'is-danger': errors.has('after_field') }" name="after_field" type="text" placeholder="DD/MM/YYYY">
+                        <input v-validate data-vv-rules="date_format:DD/MM/YYYY|after:after_field_target" :class="{'input': true, 'is-danger': errors.has('after_field') }" name="after_field" type="text" placeholder="DD/MM/YYYY">
                         <span v-show="errors.has('after_field')" class="help is-danger">{{ errors.first('after_field') }}</span>
                     </p>
                     <p class="control">
@@ -69,7 +69,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="alpha" :class="{'input': true, 'is-danger': errors.has('alpha_field') }" name="alpha_field" type="text" placeholder="Enter Some Characters...">
+                        <input v-validate data-vv-rules="alpha" :class="{'input': true, 'is-danger': errors.has('alpha_field') }" name="alpha_field" type="text" placeholder="Enter Some Characters...">
                         <span v-show="errors.has('alpha_field')" class="help is-danger">{{ errors.first('alpha_field') }}</span>
                     </p>
                 </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="alpha_dash" :class="{'input': true, 'is-danger': errors.has('alpha_dash_field') }" name="alpha_dash_field" type="text" placeholder="Enter characters or dashes">
+                        <input v-validate data-vv-rules="alpha_dash" :class="{'input': true, 'is-danger': errors.has('alpha_dash_field') }" name="alpha_dash_field" type="text" placeholder="Enter characters or dashes">
                         <span v-show="errors.has('alpha_dash_field')" class="help is-danger">{{ errors.first('alpha_dash_field') }}</span>
                     </p>
                 </div>
@@ -93,7 +93,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="alpha_num" :class="{'input': true, 'is-danger': errors.has('alpha_num_field') }" name="alpha_num_field" type="text" placeholder="Enter characters and numbers">
+                        <input v-validate data-vv-rules="alpha_num" :class="{'input': true, 'is-danger': errors.has('alpha_num_field') }" name="alpha_num_field" type="text" placeholder="Enter characters and numbers">
                         <span v-show="errors.has('alpha_num_field')" class="help is-danger">{{ errors.first('alpha_num_field') }}</span>
                     </p>
                 </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="date_format:DD/MM/YYYY|before:before_field_target" :class="{'input': true, 'is-danger': errors.has('before_field') }" name="before_field" type="text" placeholder="DD/MM/YYYY">
+                        <input v-validate data-vv-rules="date_format:DD/MM/YYYY|before:before_field_target" :class="{'input': true, 'is-danger': errors.has('before_field') }" name="before_field" type="text" placeholder="DD/MM/YYYY">
                         <span v-show="errors.has('before_field')" class="help is-danger">{{ errors.first('before_field') }}</span>
                     </p>
                     <p class="control">
@@ -127,7 +127,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="between:1,11" :class="{'input': true, 'is-danger': errors.has('between_field') }" name="between_field" type="text" placeholder="Enter a number between 1 and 11">
+                        <input v-validate data-vv-rules="between:1,11" :class="{'input': true, 'is-danger': errors.has('between_field') }" name="between_field" type="text" placeholder="Enter a number between 1 and 11">
                         <span v-show="errors.has('between_field')" class="help is-danger">{{ errors.first('between_field') }}</span>
                     </p>
                 </div>
@@ -145,7 +145,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="confirmed:pw_confirm" :class="{'input': true, 'is-danger': errors.has('confirm_field') }" name="confirm_field" type="password" placeholder="Enter The Password">
+                        <input v-validate data-vv-rules="confirmed:pw_confirm" :class="{'input': true, 'is-danger': errors.has('confirm_field') }" name="confirm_field" type="password" placeholder="Enter The Password">
                         <span v-show="errors.has('confirm_field')" class="help is-danger">{{ errors.first('confirm_field') }}</span>
                     </p>
                     <p class="control">
@@ -167,7 +167,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="date_format:DD/MM/YYYY|date_between:10/09/2016,20/09/2016" :class="{'input': true, 'is-danger': errors.has('date_between_field') }" name="date_between_field" type="text" placeholder="DD/MM/YYYY betweem 10/09/2016 and 20/09/2016">
+                        <input v-validate data-vv-rules="date_format:DD/MM/YYYY|date_between:10/09/2016,20/09/2016" :class="{'input': true, 'is-danger': errors.has('date_between_field') }" name="date_between_field" type="text" placeholder="DD/MM/YYYY betweem 10/09/2016 and 20/09/2016">
                         <span v-show="errors.has('date_between_field')" class="help is-danger">{{ errors.first('date_between_field') }}</span>
                     </p>
                 </div>
@@ -185,7 +185,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="date_format:DD/MM/YYYY" :class="{'input': true, 'is-danger': errors.has('date_format_field') }" name="date_format_field" type="text" placeholder="DD/MM/YYYY">
+                        <input v-validate data-vv-rules="date_format:DD/MM/YYYY" :class="{'input': true, 'is-danger': errors.has('date_format_field') }" name="date_format_field" type="text" placeholder="DD/MM/YYYY">
                         <span v-show="errors.has('date_format_field')" class="help is-danger">{{ errors.first('date_format_field') }}</span>
                     </p>
                 </div>
@@ -203,7 +203,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="decimal:3" :class="{'input': true, 'is-danger': errors.has('decimal_field') }" name="decimal_field" type="text" placeholder="Numeric value with decimals">
+                        <input v-validate data-vv-rules="decimal:3" :class="{'input': true, 'is-danger': errors.has('decimal_field') }" name="decimal_field" type="text" placeholder="Numeric value with decimals">
                         <span v-show="errors.has('decimal_field')" class="help is-danger">{{ errors.first('decimal_field') }}</span>
                     </p>
                 </div>
@@ -221,7 +221,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="digits:3" :class="{'input': true, 'is-danger': errors.has('digits_field') }" name="digits_field" type="text" placeholder="Enter 3 digit number">
+                        <input v-validate data-vv-rules="digits:3" :class="{'input': true, 'is-danger': errors.has('digits_field') }" name="digits_field" type="text" placeholder="Enter 3 digit number">
                         <span v-show="errors.has('digits_field')" class="help is-danger">{{ errors.first('digits_field') }}</span>
                     </p>
                 </div>
@@ -240,7 +240,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="dimensions:30,30" data-as="image" name="dimensions_field" type="file">
+                        <input v-validate data-vv-rules="dimensions:30,30" data-vv-as="image" name="dimensions_field" type="file">
                         <span v-show="errors.has('dimensions_field')" class="help is-danger">{{ errors.first('dimensions_field') }}</span>
                     </p>
                 </div>
@@ -252,7 +252,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="email" data-as="email" :class="{'input': true, 'is-danger': errors.has('email_field') }" name="email_field" type="text" placeholder="Your Email">
+                        <input v-validate data-vv-rules="email" data-vv-as="email" :class="{'input': true, 'is-danger': errors.has('email_field') }" name="email_field" type="text" placeholder="Your Email">
                         <span v-show="errors.has('email_field')" class="help is-danger">{{ errors.first('email_field') }}</span>
                     </p>
                 </div>
@@ -267,7 +267,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="ext:jpeg,jpg" data-as="field" name="ext_field" type="file">
+                        <input v-validate data-vv-rules="ext:jpeg,jpg" data-vv-as="field" name="ext_field" type="file">
                         <span v-show="errors.has('ext_field')" class="help is-danger">{{ errors.first('ext_field') }}</span>
                     </p>
                 </div>
@@ -279,7 +279,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="image" data-as="image" name="image_field" type="file">
+                        <input v-validate data-vv-rules="image" data-vv-as="image" name="image_field" type="file">
                         <span v-show="errors.has('image_field')" class="help is-danger">{{ errors.first('image_field') }}</span>
                     </p>
                 </div>
@@ -295,7 +295,7 @@
                 <div>
                     <p class="control">
                         <span class="select">
-                            <select v-validate data-rules="in:1,2,3" :class="{ 'is-danger': errors.has('in_field') }" name="in_field" data-as="selected">
+                            <select v-validate data-vv-rules="in:1,2,3" :class="{ 'is-danger': errors.has('in_field') }" name="in_field" data-vv-as="selected">
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -313,7 +313,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="ip" data-as="ip" :class="{'input': true, 'is-danger': errors.has('ip_field') }" name="ip_field" type="text" placeholder="Your IP Address">
+                        <input v-validate data-vv-rules="ip" data-vv-as="ip" :class="{'input': true, 'is-danger': errors.has('ip_field') }" name="ip_field" type="text" placeholder="Your IP Address">
                         <span v-show="errors.has('ip_field')" class="help is-danger">{{ errors.first('ip_field') }}</span>
                     </p>
                 </div>
@@ -331,7 +331,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="max:11" data-as="field" :class="{'input': true, 'is-danger': errors.has('max_field') }" name="max_field" type="text" placeholder="11 Characters or shorter">
+                        <input v-validate data-vv-rules="max:11" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('max_field') }" name="max_field" type="text" placeholder="11 Characters or shorter">
                         <span v-show="errors.has('max_field')" class="help is-danger">{{ errors.first('max_field') }}</span>
                     </p>
                 </div>
@@ -347,7 +347,7 @@
                 <div>
                     <p class="control">
                         <label class="label">Image File</label>
-                        <input v-validate data-rules="mimes:image/*" data-as="image" name="mimes_field" type="file">
+                        <input v-validate data-vv-rules="mimes:image/*" data-vv-as="image" name="mimes_field" type="file">
                         <span v-show="errors.has('mimes_field')" class="help is-danger">{{ errors.first('mimes_field') }}</span>
                     </p>
                 </div>
@@ -368,7 +368,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="min:3" data-as="field" :class="{'input': true, 'is-danger': errors.has('min_field') }" name="min_field" type="text" placeholder="Min: 3">
+                        <input v-validate data-vv-rules="min:3" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('min_field') }" name="min_field" type="text" placeholder="Min: 3">
                         <span v-show="errors.has('min_field')" class="help is-danger">{{ errors.first('min_field') }}</span>
                     </p>
                 </div>
@@ -384,7 +384,7 @@
                 <div>
                     <p class="control">
                         <span class="select">
-                            <select v-validate data-rules="not_in:1,2,3" :class="{ 'is-danger': errors.has('not_in_field') }" name="not_in_field" data-as="selected">
+                            <select v-validate data-vv-rules="not_in:1,2,3" :class="{ 'is-danger': errors.has('not_in_field') }" name="not_in_field" data-vv-as="selected">
                                 <option value="1">One - Invalid</option>
                                 <option value="2">Two - Invalid</option>
                                 <option value="3">Three - Invalid</option>
@@ -402,7 +402,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="numeric" data-as="field" :class="{'input': true, 'is-danger': errors.has('numeric_field') }" name="numeric_field" type="text" placeholder="Numbers only">
+                        <input v-validate data-vv-rules="numeric" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('numeric_field') }" name="numeric_field" type="text" placeholder="Numbers only">
                         <span v-show="errors.has('numeric_field')" class="help is-danger">{{ errors.first('numeric_field') }}</span>
                     </p>
                 </div>
@@ -422,7 +422,7 @@
                 <div>
                     <p class="control">
                         <label class="label">Regex: ^([0-9]+)$</label>
-                        <input v-validate data-rules="regex:^([0-9]+)$" data-as="field" :class="{'input': true, 'is-danger': errors.has('regex_field') }" name="regex_field" type="text" placeholder="Numbers only">
+                        <input v-validate data-vv-rules="regex:^([0-9]+)$" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('regex_field') }" name="regex_field" type="text" placeholder="Numbers only">
                         <span v-show="errors.has('regex_field')" class="help is-danger">{{ errors.first('regex_field') }}</span>
                     </p>
                 </div>
@@ -437,7 +437,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="required" data-as="field" :class="{'input': true, 'is-danger': errors.has('required_field') }" name="required_field" type="text" placeholder="Is Required">
+                        <input v-validate data-vv-rules="required" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('required_field') }" name="required_field" type="text" placeholder="Is Required">
                         <span v-show="errors.has('required_field')" class="help is-danger">{{ errors.first('required_field') }}</span>
                     </p>
                 </div>
@@ -455,7 +455,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="size:10" name="size_field" data-as="file" type="file">
+                        <input v-validate data-vv-rules="size:10" name="size_field" data-vv-as="file" type="file">
                         <span class="help is-danger" v-show="errors.has('size_field')">{{ errors.first('size_field') }}</span>
                     </p>
                 </div>
@@ -473,7 +473,7 @@
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-rules="url:google.com" data-as="field" :class="{'input': true, 'is-danger': errors.has('url_field') }" name="url_field" type="text" placeholder="Enter a google.com domain url">
+                        <input v-validate data-vv-rules="url:google.com" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('url_field') }" name="url_field" type="text" placeholder="Enter a google.com domain url">
                         <span v-show="errors.has('url_field')" class="help is-danger">{{ errors.first('url_field') }}</span>
                     </p>
                 </div>
@@ -634,7 +634,7 @@
             </code-block>
 
             <note>
-                If the attribute is not found for the current locale, it will fallback to the binding expression or the field name. If you use the <router-link :to="{ name: 'localization', hash: '#attributes-data-as' }">data-as</router-link> attribute it will take precedence over the internal dictionary.
+                If the attribute is not found for the current locale, it will fallback to the binding expression or the field name. If you use the <router-link :to="{ name: 'localization', hash: '#attributes-data-vv-as' }">data-vv-as</router-link> attribute it will take precedence over the internal dictionary.
             </note>
         </p>
     </div>

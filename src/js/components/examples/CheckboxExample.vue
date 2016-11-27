@@ -9,7 +9,7 @@
             <div>
                 <p class="control">
                     <label class="checkbox">
-                        <input name="terms" v-validate data-rules="required" type="checkbox">
+                        <input name="terms" v-validate data-vv-rules="required" type="checkbox">
                         I agree to the terms and conditions.
                     </label>
                     <span class="help is-danger" v-show="errors.has('terms')">{{ errors.first('terms') }}</span>
@@ -29,7 +29,7 @@
                 &lt;div&gt;
                     &lt;p class=&quot;control&quot;&gt;
                         &lt;label class=&quot;checkbox&quot;&gt;
-                            &lt;input name=&quot;terms&quot; v-validate data-rules=&quot;required&quot; type=&quot;checkbox&quot;&gt;
+                            &lt;input name=&quot;terms&quot; v-validate data-vv-rules=&quot;required&quot; type=&quot;checkbox&quot;&gt;
                             I agree to the terms and conditions.
                         &lt;/label&gt;
                         &lt;span class=&quot;help is-danger&quot; v-show=&quot;errors.has('terms')&quot;&gt;{{ "{" + "{ errors.first('terms') }" + "}" }}&lt;/span&gt;
