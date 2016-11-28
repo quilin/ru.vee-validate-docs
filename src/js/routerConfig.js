@@ -21,7 +21,7 @@ export default {
     scrollBehavior,
     routes: [
         { path: '/', name: 'home', component: view('Home'), meta: { subtitle: 'Simple Vue.js Input Validation', scrollToTop: true } },
-        { path: '/api', name: 'api', component: view('Api'), meta: { subtitle: 'Classes API', scrollToTop: true } },
+        { path: '/api', name: 'api', component: view('Api'), meta: { subtitle: 'Classes Public API', scrollToTop: true } },
         { path: '/examples', name: 'examples', component: view('Examples'), meta: { subtitle: 'Usage and Examples', scrollToTop: true } },
         { path: '/rules', name: 'rules', component: view('Rules'), meta: { subtitle: 'Validation Rules', scrollToTop: true } },
         { path: '/localization', name: 'localization', component: view('Localization'), meta: { subtitle: 'Language Support', scrollToTop: true } },

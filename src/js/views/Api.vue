@@ -1,8 +1,10 @@
 <template>
     <div>
+        <h2 id="data-attributes" class="title is-4"><a href="#data-attributes">data-* Attributes</a></h2>
+        <data-attributes-api></data-attributes-api>
         <h2 id="error-bag" class="title is-4"><a href="#error-bag">ErrorBag</a></h2>
         <p>
-            The ErrorBag class is a wrapper around an array, and is standalone and has no dependencies, you can use it in your code for any reason:
+            The ErrorBag class is a wrapper around an array a collection object in other words, and is standalone and has no dependencies, you can use it in your code for any reason:
             <code-block class="language-javascript">
                 import { ErrorBag } from 'vee-validate'; // ES6 Import.
                 const bag = new ErrorBag();
@@ -11,30 +13,13 @@
             <code-block class="language-javascript">
                 {
                     errors: [
-                        { field: 'Field name', msg: 'Error message' },
-                        { field: 'Field name', msg: 'Error message' },
-                        { field: 'Field name', msg: 'Error message' }
+                        { field: 'Field name', msg: 'Error message', rule: 'Rule Name', scope: 'Scope Name' },
+                        // other error objects.
                     ]
                 }
             </code-block>
         </p>
-        <p>
-            <b class="important">Available Methods:</b>
-            <ul class="list-circle">
-                <li><code class="inline">add(String field, String msg)</code> adds an error object to the internal array.</li>
-                <li><code class="inline">all()</code> Gets all messages from the internal array.</li>
-                <li><code class="inline">any()</code> Checks if there are any errors.</li>
-                <li><code class="inline">clear()</code> Removes all items from the internal array.</li>
-                <li><code class="inline">collect(String field)</code> Collects errors associated with a specific field. not passing the field name will group all errors by field name instead.</li>
-                <li><code class="inline">count()</code> Gets the length of the internal array. or the number of messages.</li>
-                <li><code class="inline">first(String field)</code> Gets the first error message associated with the specified field.</li>
-                <li><code class="inline">has(String field)</code> Checks if there is at least one error associated with the specified field.</li>
-                <li><code class="inline">remove(String field)</code> Removes all errors for a specified field from the internal array.</li>
-            </ul>
-            <note>
-                All of the methods above accept an optional <code>scope</code> parameter which will limit the method effect to a specific scope. You can read more about scopes <router-link :to="{ name: 'examples', hash: '#scope-example' }">here</router-link>.
-            </note>
-        </p>
+        <errors-api></errors-api>
         <h2 id="validator" class="title is-4"><a href="#validator">Validator</a></h2>
         <p>
             The validator is injected to the Vue instance as <code class="inline">$validator</code> automatically.
@@ -99,6 +84,7 @@
                 Validator.setDefaultLocale(); // resets to english, again for all newly created validators, previously created ones won't be touched.
             </code-block>
         </p>
+        <validator-api></validator-api>
         <h2 id="validator-example" class="title is-4"><a href="#validator-example">Validator Example</a></h2>
         <p>
             Here is an example of using the validator without the directive, which means you will be responsible for monitoring input changes on your own, and calling the API methods as you see fit.
@@ -110,10 +96,16 @@
 
 <script>
 import ValidatorExample from './../components/examples/ValidatorExample.vue';
+import ErrorsApi from './partials/API/Errors.vue';
+import ValidatorApi from './partials/API/Validator.vue';
+import DataAttributesApi from './partials/API/DataAttributes.vue';
 
 export default {
     components: {
-        ValidatorExample
+        ValidatorExample,
+        ErrorsApi,
+        ValidatorApi,
+        DataAttributesApi
     }
 };
 </script>
