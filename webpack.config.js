@@ -28,7 +28,7 @@ let config = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 query: {
                     babelrc: false,
                     presets: [
@@ -38,24 +38,24 @@ let config = {
             },
             {
                 test: /\.vue$/,
-                loader: 'vue',
+                loader: 'vue-loader',
                 exclude: /node_modules/,
             },
             {
                 test: /\.vue$/,
-                loader: 'eslint',
+                loader: 'eslint-loader',
                 exclude: /node_modules/,
                 enforce: 'pre'
             },
             {
                 test: /\.js$/,
-                loader: 'eslint',
+                loader: 'eslint-loader',
                 exclude: /node_modules/,
                 enforce: 'pre'
             },
             {
                 test: /\.woff(2)?(\?.*)?$/i,
-                loader: 'url',
+                loader: 'url-loader',
                 query: {
                     limit: 10000,
                     mimetype: 'application/font-woff',
@@ -77,7 +77,7 @@ let config = {
             {
                 test: /.hbs$/,
                 exclude: /node_modules/,
-                loader: 'handlebars'
+                loader: 'handlebars-loader'
             }
         ]
     }

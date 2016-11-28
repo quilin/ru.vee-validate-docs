@@ -10,17 +10,17 @@ module.exports = {
         stats: 'errors-only',
         contentBase: './docs',
         host: '0.0.0.0',
-        port: '8080'
+        port: 8080
     },
     module: {
         loaders: [
             {
                 test: /\.css$/,
-                loaders: ['style', 'css']
+                loaders: ['style-loader', 'css-loader']
             },
             {
                 test: /.styl$/,
-                loaders: ['style', 'css', 'stylus']
+                loaders: ['style-loader', 'css-loader', 'stylus-loader']
             }
         ]
     }

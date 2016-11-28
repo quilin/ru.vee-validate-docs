@@ -17,7 +17,7 @@
             </code-block>
 
             Now when any error message is generated for this input will use the <code>data-vv-as</code> value instead of the actual field name. this is also the same for binding expressions.
-            While this is very useful for simple setups and displaying localized names, you might want to check the approach below.
+            While this is very useful for simple setups and displaying localized names, but it is only ideal for a single-locale page, for multi-localized pages and more advanced usages you might want to check the approach below.
         </p>
         <h2 id="attributes-dictionary" class="title is-4"><a href="#attributes-dictionary">Attributes (Dictionary)</a></h2>
         <p>
@@ -61,8 +61,7 @@
             });
         </code-block>
         <note>
-            You can still modify the default language for each validator individually via the <code>setLocale</code> method on the validator instance.
-            And you can also switch the language for all future validators (not created yet) via the <code>setDefaultLocale</code> static method on the Validator class.
+            Both the validator class and the validator instances offer <code class="inline">setLocale</code> method which changes the current locale for <b>All Validators</b> to the specified locale, not providing a locale will switch them to English instead.
         </note>
         <div>
             A working example can be found <router-link class="link" :to="{ name: 'examples', hash: '#locale-example' }">here</router-link>.
@@ -72,7 +71,7 @@
             In the <a class="link" href="https://github.com/logaretm/vee-validate/tree/master/dist/locale" target="github"><code class="inline">dist/locale</code></a> directory of this plugin, is a collection of localized files.
             If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate" class="link" target="github">repo</a>. I will happily accept it.
         </p>
-        <b class="important">Available Locales:</b>
+        <h2 id="available-locales" class="title is-4"><a href="#available-locales">Available Locales:</a></h2>
         <ul class="list-circle">
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en.js" target="github">English</a></li>
             <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/ar.js" target="github">Arabic</a></li>

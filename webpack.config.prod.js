@@ -28,12 +28,12 @@ module.exports = {
             vue: {
                 loaders: {
                     css: ExtractTextPlugin.extract({
-                        fallbackLoader: 'style',
-                        loader: 'css'
+                        fallbackLoader: 'style-loader',
+                        loader: 'css-loader'
                     }),
                     stylus: ExtractTextPlugin.extract({
-                        fallbackLoader: 'style',
-                        loader: ['css', 'stylus']
+                        fallbackLoader: 'style-loader',
+                        loader: ['css-loader', 'stylus-loader']
                     })
                 }
             }
@@ -44,15 +44,15 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style',
-                    loader: 'css'
+                    fallbackLoader: 'style-loader',
+                    loader: 'css-loader'
                 })
             },
             {
                 test: /.styl$/,
                 loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style',
-                    loader: ['css', 'stylus']
+                    fallbackLoader: 'style-loader',
+                    loader: ['css-loader', 'stylus-loader']
                 })
             }
         ]

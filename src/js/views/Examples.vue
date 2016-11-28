@@ -17,7 +17,7 @@
         <reject-example></reject-example>
         <h2 id="validate-data-vv-example" class="title is-4"><a href="#validate-data-vv-example">Validate $data</a></h2>
         <p>
-            The basic approach relies on listening to the <code class="inline">input</code> or the <code class="inline">change</code> events depending on the file type.
+            The basic approach relies on listening to the <code class="inline">input</code> or the <code class="inline">change</code> events along with <code class="inline">blur</code> event depending on the input type.
             However most of the time, your values are bound to your Vue instance and some code may change their inputs programatically, the basic approach won't detect this change.
             <br><br>
             <b class="important">The Solution:</b> The <code class="inline">v-validate</code> directive can take a binding expression, the expression is the data name you wish to validate. for example:
@@ -26,11 +26,11 @@
             </code-block>
             Whenever the binding value is updated, the validator will validate the new value automatically.
             <note>
-                The plugin will use the data in your vue instance as the source of the input value, meaning it won't be watching the input anymore.
+                The plugin will use the data in your vue instance as the source of the input value, meaning it won't be watching the input via events anymore.
                 And as you noticed, you don't need to provide a <code>name</code> attribute, as the expression name will be used instead.
             </note>
          </p>
-         <data-vv-example></data-vv-example>
+         <data-example></data-example>
          <p>
             <note>
                 Notice that the <code>email</code> field was immediatly validated when you open the page, you may not want this behavior, use the <code>initial</code> modifier to tell the validator to ignore the first evaluation like this: <code>v-validate.initial</code>.
@@ -52,8 +52,7 @@
          </p>
          <locale-example></locale-example>
          <note>
-             Here we are also seeing <code>data-vv-as</code> attribute which tells the validator to use that value as the field name when generating error messages, this is a good way to display 'pretty names' for your inputs in error messages, which would make sense when displaying messages in other languages.
-             <br><br>Keep in mind that those pretty names are only used when generating error messages.
+            You see us also provide attributes object when merging the arabic dictionary, which translates the field names, whenever a field name is matched with the currently active locale it will use the translated one when generating messages, check <router-link :to="{ name: 'localization' }">Localization page</router-link> for more details.
          </note>
          <h2 id="scope-example" class="title is-4"><a href="#scope-example">Scopes</a></h2>
          <p>
