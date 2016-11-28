@@ -1,6 +1,10 @@
 <template>
     <div>
         <h2 id="data-attributes" class="title is-4"><a href="#data-attributes">data-* Attributes</a></h2>
+        <p>
+            data-* attributes are the plugin's interface to specify what exactly should happen, providing a simple and Vue version-compatiable API.
+        </p>
+        <br>
         <data-attributes-api></data-attributes-api>
         <h2 id="error-bag" class="title is-4"><a href="#error-bag">ErrorBag</a></h2>
         <p>
