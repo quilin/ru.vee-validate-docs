@@ -24,7 +24,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input v-model=&quot;email&quot; v-validate data-vv-rules=&quot;required|email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+                        &lt;input v-model=&quot;email&quot; v-validate data-vv-rules=&quot;required|email&quot; data-vv-delay=&quot;1000&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
                         &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('email') }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
@@ -32,7 +32,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;Name&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input v-model=&quot;name&quot; v-validate data-vv-rules=&quot;required|alpha&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
+                        &lt;input v-model=&quot;name&quot; v-validate data-vv-rules=&quot;required|alpha&quot; data-vv-delay=&quot;500&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
                         &lt;i v-show=&quot;errors.has('name')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has('name')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('name') }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
