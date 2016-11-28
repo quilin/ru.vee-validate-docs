@@ -126,7 +126,7 @@
             Here is an example that uses those flags, the button is disabled unless one of the fields is dirty.
          </p>
          <flags-example></flags-example>
-        <h2 id="selectors-example" class="title is-4"><a href="#selectors-example">Selectors</a></h2>
+        <h2 id="selectors-example" class="title is-4"><a href="#selectors-example">Error Selectors</a></h2>
         <p>
             The <code class="inline">errors.first</code> and <code class="inline">errors.has</code> methods don't only provide you with a way to fetch the first input for a specific field, they also allow you to filter it down further to a specific rule, using the following syntax <code class="inline">'field:rule'</code>.
             <br>

@@ -57,6 +57,8 @@
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#radio-buttons-example'}">Radio Buttons Validation</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#checkbox-example'}">Checkbox Example</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#flags-example'}">Validation Flags</router-link></li>
+            <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#selectors-example'}">Error Selectors</router-link></li>
+
         </ul>
         <p class="menu-label">
             API
