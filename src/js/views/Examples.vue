@@ -126,20 +126,28 @@
             Here is an example that uses those flags, the button is disabled unless one of the fields is dirty.
          </p>
          <flags-example></flags-example>
+        <h2 id="selectors-example" class="title is-4"><a href="#selectors-example">Selectors</a></h2>
+        <p>
+            The <code class="inline">errors.first</code> and <code class="inline">errors.has</code> methods don't only provide you with a way to fetch the first input for a specific field, they also allow you to filter it down further to a specific rule, using the following syntax <code class="inline">'field:rule'</code>.
+            <br>
+            In the example below, you can specify which rule to display errors for.
+        </p>
+        <selectors-example></selectors-example>
     </div>
 </template>
 
 <script>
-import DelayExample from './../components/examples/DelayExample.vue';
-import LocaleExample from './../components/examples/LocaleExample.vue';
-import RejectExample from './../components/examples/RejectExample.vue';
-import ScopeExample from './../components/examples/ScopeExample.vue';
-import DataExample from './../components/examples/DataExample.vue';
-import EventExample from './../components/examples/EventExample.vue';
-import CouponExample from './../components/examples/CouponExample.vue';
-import RadioButtonsExample from './../components/examples/RadioButtonsExample.vue';
-import CheckboxExample from './../components/examples/CheckboxExample.vue';
-import FlagsExample from './../components/examples/FlagsExample.vue';
+import DelayExample from './../components/examples/Delay.vue';
+import LocaleExample from './../components/examples/Locale.vue';
+import RejectExample from './../components/examples/FileReject.vue';
+import ScopeExample from './../components/examples/Scopes.vue';
+import DataExample from './../components/examples/Data.vue';
+import EventExample from './../components/examples/Event.vue';
+import CouponExample from './../components/examples/Coupon.vue';
+import RadioButtonsExample from './../components/examples/RadioButtons.vue';
+import CheckboxExample from './../components/examples/Checkbox.vue';
+import FlagsExample from './../components/examples/Flags.vue';
+import SelectorsExample from './../components/examples/Selectors.vue';
 
 export default {
     components: {
@@ -152,7 +160,8 @@ export default {
         CouponExample,
         RadioButtonsExample,
         CheckboxExample,
-        FlagsExample
+        FlagsExample,
+        SelectorsExample
     }
 };
 </script>
