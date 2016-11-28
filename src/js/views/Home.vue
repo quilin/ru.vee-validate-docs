@@ -123,7 +123,7 @@
 <script>
 import Collection from 'collectionsjs';
 import data from './../data.json';
-import BasicExample from './../components/examples/BasicExample.vue';
+import BasicExample from './../components/examples/Basic.vue';
 
 export default {
     data: () => ({
