@@ -56,10 +56,10 @@
          </note>
          <h2 id="scope-example" class="title is-4"><a href="#scope-example">Scopes</a></h2>
          <p>
-            By default the scope of the validator is the same as the Vue instance that owns it, sometimes you may have multiple fields with the same name, they are in different forms and serve different purposes.
+            By default the scope of the validator is the same as the Vue instance that owns it, sometimes you may have multiple fields within the same component, they are in different forms and serve different purposes.
             The validator will then treat those two fields as the same field which will cause problems detecting the input and displaying the errors.
             <br><br>
-            You can tell the validator to scope the fields by adding a <code class="inline">data-vv-scope</code> attribute which tells the validator the name of the scope. Those fields will be then identified using their name and their scope. allowing duplicate fields to exist within the same component.
+            You can tell the validator to scope the fields by adding a <code class="inline">data-vv-scope</code> attribute which tells the validator the name of the scope. Those fields will be then identified using their name and their scope. but currently that does not allow multiple fields with the same name, it just allows you to control validation and display errors for different scopes, and allows you to group inputs within a specific scope.
             <br><br>
             For convienece you may add the <code class="inline">data-vv-scope</code> on the form that owns the inputs, you don't have to add the attribute on each and every input.
          </p>

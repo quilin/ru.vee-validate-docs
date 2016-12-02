@@ -71,23 +71,5 @@
             In the <a class="link" href="https://github.com/logaretm/vee-validate/tree/master/dist/locale" target="github"><code class="inline">dist/locale</code></a> directory of this plugin, is a collection of localized files.
             If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate" class="link" target="github">repo</a>. I will happily accept it.
         </p>
-        <h2 id="available-locales" class="title is-4"><a href="#available-locales">Available Locales:</a></h2>
-        <ul class="list-circle">
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en.js" target="github">English</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/ar.js" target="github">Arabic</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/es.js" target="github">Spanish</a> by <a class="link" href="https://github.com/ClaudioEyzaguirre" target="github">@ClaudioEyzaguirre</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/pt_BR.js" target="github">Brazilian Portuguese</a> by <a class="link" href="https://github.com/edbizarro" target="github">@edbizarro</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/fi.js" target="github">Finnish</a> by <a class="link" href="https://github.com/anttisand" target="github">@anttisand</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/de.js" target="github">German</a> by <a class="link" href="https://github.com/kayschima" target="github">@kayschima</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/fr.js" target="github">French</a> by <a class="link" href="https://github.com/thierrymichel" target="github">@thierrymichel</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/vi.js" target="github">Vietnamese</a> by <a class="link" href="https://github.com/imcvampire" target="github">@imcvampire</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/it.js" target="github">Italian</a> by <a class="link" href="https://github.com/ionut-tanasa" target="github">@ionut-tanasa</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/nl.js" target="github">Dutch</a> by <a class="link" href="https://github.com/Woutje99" target="github">@Woutje99</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/el.js" target="github">Greek</a> by <a class="link" href="https://github.com/rousos87" target="github">@rousos87</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/id.js" target="github">Indonesian</a> by <a class="link" href="https://github.com/gunturaf" target="github">@gunturaf</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/da.js" target="github">Danish</a> by <a class="link" href="https://github.com/wolthers" target="github">@wolthers</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/zh_CN.js" target="github">Chinese</a> by <a class="link" href="https://github.com/zppro" target="github">@zppro</a></li>
-            <li><a class="link" href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/pl.js" target="github">Polish</a> by <a class="link" href="https://github.com/murbanowicz" target="github">@murbanowicz</a></li>
-        </ul>
     </div>
 </template>

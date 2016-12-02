@@ -11,14 +11,6 @@
                         <span v-show="errors.has('name', 'form-1')" class="help is-danger">{{ errors.first('name', 'form-1') }}</span>
                     </p>
                 </div>
-                <div class="column is-12">
-                    <label class="label">Email</label>
-                    <p class="control has-icon has-icon-right">
-                        <input name="email" v-validate data-vv-rules="required|email" :class="{'input': true, 'is-danger': errors.has('email', 'form-1') }" type="text" placeholder="Email">
-                        <i v-show="errors.has('email', 'form-1')" class="fa fa-warning"></i>
-                        <span v-show="errors.has('email', 'form-1')" class="help is-danger">{{ errors.first('email', 'form-1') }}</span>
-                    </p>
-                </div>
 
                 <div class="column is-12">
                     <p class="control">
@@ -39,9 +31,9 @@
                     </p>
                 </div>
                 <div class="column is-12">
-                    <label class="label">Email</label>
+                    <label class="label">Password</label>
                     <p class="control has-icon has-icon-right">
-                        <input name="password" v-validate data-vv-rules="required|min:6" :class="{'input': true, 'is-danger': errors.has('password', 'form-1') }" type="password" placeholder="Password">
+                        <input name="password" v-validate data-vv-rules="required|min:6" :class="{'input': true, 'is-danger': errors.has('password', 'form-2') }" type="password" placeholder="Password">
                         <i v-show="errors.has('password', 'form-2')" class="fa fa-warning"></i>
                         <span v-show="errors.has('password', 'form-2')" class="help is-danger">{{ errors.first('password', 'form-2') }}</span>
                     </p>
@@ -146,13 +138,12 @@
 export default {
     methods: {
         validateForm(scope) {
-            this.$validator.validateAll(scope);
-            if (this.errors.any(scope)) {
-                return;
-            }
-
-            // eslint-disable-next-line
-            alert('Form Submitted!');
+            this.$validator.validateAll(scope).then(result => {
+                if (result) {
+                    // eslint-disable-next-line
+                    alert('Form Submitted!');
+                }
+            });
         }
     }
 };
