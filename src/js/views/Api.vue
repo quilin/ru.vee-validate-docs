@@ -75,17 +75,17 @@
                 validator.setLocale('ar');
             </code-block>
             <note>
-                Each validator keeps track of its own locale. so be sure to update any instances whenever the language changes.
+                All validators share the same locale configuration. so any locale changes will update all validator instances across your app.
                 For more information about how to overwrite messages and add new ones, please refer to the <router-link :to="{ name: 'rules', hash: 'custom-messages' }" class="link">custom messages</router-link> section.
             </note>
-            The Validator class has a static method called <code class="inline">setDefaultLocale(string)</code> which sets the default language for all newly instantiated validators to that language.
             <code-block class="language-javascript">
                 import { Validator } from 'vee-validate';
 
-                Validator.setDefaultLocale('ar'); // from now on, all validators that are created will have this locale.
+                // Also exposed on the class.
+                Validator.setLocale('ar'); // Set all validator locales to 'ar'.
                 Validator.create().locale // 'ar';
 
-                Validator.setDefaultLocale(); // resets to english, again for all newly created validators, previously created ones won't be touched.
+                Validator.setLocale(); // resets to english because no argument was passed, all validators will be switched to English.
             </code-block>
         </p>
         <validator-api></validator-api>
