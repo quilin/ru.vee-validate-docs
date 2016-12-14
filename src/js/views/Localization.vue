@@ -16,7 +16,7 @@
                 &lt;input v-validate data-vv-rules=&quot;alpha|min:3&quot; data-vv-as=&quot;First Name&quot; name=&quot;first_name&quot; type=&quot;text&quot;&gt;
             </code-block>
 
-            Now when any error message is generated for this input will use the <code>data-vv-as</code> value instead of the actual field name. this is also the same for binding expressions.
+            Now when any error message is generated for this input will use the <code>data-vv-as</code> value instead of the actual field name. This is also the same for binding expressions.
             While this is very useful for simple setups and displaying localized names, but it is only ideal for a single-locale page, for multi-localized pages and more advanced usages you might want to check the approach below.
         </p>
         <h2 id="attributes-dictionary" class="title is-4"><a href="#attributes-dictionary">Attributes (Dictionary)</a></h2>
