@@ -30,7 +30,7 @@
         <div class="rules">
             <note title="note">
                 Date validators always require the <code>date_format</code> rule to be always present and must preceed them in the rules order. The date validators are not enabled by default, they require <a href="http://momentjs.com">momentjs</a> in order to work.
-                If your setup contains momentjs globally, it will be installed automatically for all validator instances. otherwise you may want to pass the moment reference to <code>installDateTimeValidators(moment)</code> which is available both statically and on instances.
+                If your setup contains momentjs globally, it will be installed automatically for all validator instances. Otherwise you may want to pass the moment reference to <code>installDateTimeValidators(moment)</code> which is available both statically and on instances.
 
                 Also note that the date validators always use the <a href="http://momentjs.com/guides/#/parsing/strict-mode/" class="link">'strict' moment parsing mode</a>.
             </note>
@@ -49,7 +49,7 @@
                 <div class="args">
                     <span class="args__title">args:</span>
                     <ul>
-                        <li><code class="inline">target:</code>The input name to be validated against. must have the same format as the date_format rule.</li>
+                        <li><code class="inline">target:</code>The input name to be validated against. Must have the same format as the date_format rule.</li>
                     </ul>
                 </div>
                 <div>
@@ -161,8 +161,8 @@
                 <div class="args">
                     <span class="args__title">args:</span>
                     <ul>
-                        <li><code class="inline">min:</code>The minimum allowed value for date. must be in the same format as the date_format rule.</li>
-                        <li><code class="inline">max:</code>The maximum allowed value for date. must be in the same format as the date_format rule.</li>
+                        <li><code class="inline">min:</code>The minimum allowed value for date. Must be in the same format as the date_format rule.</li>
+                        <li><code class="inline">max:</code>The maximum allowed value for date. Must be in the same format as the date_format rule.</li>
                     </ul>
                 </div>
                 <div>
@@ -342,7 +342,7 @@
                     The file type added to the field under validation should have one of the specified mime types.
                 </div>
                 <div class="args">
-                    <code class="inline">args:</code> List of comma separated mime types. <code class="inline">mimes:image/jpeg|image/png</code>
+                    <code class="inline">args:</code> List of comma separated mime types. <code class="inline">mimes:image/jpeg,image/png</code>
                 </div>
                 <div>
                     <p class="control">
@@ -433,7 +433,7 @@
             <div class="rule" id="rule-required">
                 <b class="important">required</b>
                 <div class="description">
-                    The field under validation must have a non-empty value. by default all validators pass the validation if they have "empty values" unless they are required. those empty values are: empty string, undefined, null.
+                    The field under validation must have a non-empty value. By default all validators pass the validation if they have "empty values" unless they are required. Those empty values are: empty string, undefined, null.
                 </div>
                 <div>
                     <p class="control">
@@ -463,7 +463,7 @@
             <div class="rule" id="rule-url">
                 <b class="important">url:{domain?}</b>
                 <div class="description">
-                    The field under validation must be a valid url. A domain may be optionally passed. supports subdomains.
+                    The field under validation must be a valid url. A domain may be optionally passed. It supports subdomains.
                 </div>
                 <div class="args">
                     <span class="args__title">args:</span>
@@ -533,7 +533,7 @@
 
             Additionally you may want to provide a reason for failing the validation that may change the error message. For example you may be using an external API and the error message is generated there.
             <br><br>
-            To acheive this, you need to return an <code>Object</code> instead of a <code>Boolean</code> this object should always contain a <code>valid</code> property and an optional <code>data</code> property, the data property will be passed to the message generator function as the third parameter, then you should use the passed data property to modify the output message. The same thing applies to promises as you resolve the promise with an object containg those properties. here is a custom rule that does just that:
+            To acheive this, you need to return an <code>Object</code> instead of a <code>Boolean</code> this object should always contain a <code>valid</code> property and an optional <code>data</code> property, the data property will be passed to the message generator function as the third parameter, then you should use the passed data property to modify the output message. The same thing applies to promises as you resolve the promise with an object containg those properties. Here is a custom rule that does just that:
             <code-block class="language-javascript">
                 const myRule = {
                     getMessage(field, params, data) {
@@ -553,7 +553,7 @@
             </code-block>
         </p>
         <p>
-            After creating your validator, You can add it to the list of rules using <code class="inline">extend(name, validator)</code> method in the validator instance.
+            After creating your validator, you can add it to the list of rules using <code class="inline">extend(name, validator)</code> method in the validator instance.
             <code-block class="language-javascript">
                 import { Validator } from 'vee-validate';
                 // These are 'ES6' arrow functions.
