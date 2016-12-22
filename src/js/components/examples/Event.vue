@@ -128,6 +128,8 @@ export default {
                     // handle error
                     return;
                 }
+
+                // eslint-disable-next-line
                 alert('From Submitted!');
             });
         }

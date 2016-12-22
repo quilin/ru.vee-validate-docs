@@ -132,6 +132,17 @@
             In the example below, you can specify which rule to display errors for.
         </p>
         <selectors-example></selectors-example>
+        <h2 id="component-example" class="title is-4"><a href="#component-example">Custom Component Validation</a></h2>
+        <p>
+            You might have a custom component that you want to treat it as an input, like a custom input field, it would have its own validator instance but you want to validate it in the parent scope, because it is simply just an input with some whistles on top.
+            You can achieve this by using the directive normally like you would on a regular input element, but you must make sure that your component satisfies the following:
+            <ul class="list-circle">
+                <li>Must emit an <code>input</code> event whenever the value changes.</li>
+                <li>Should have a <code>data-vv-name</code> or a <code>name</code> attribute defined.</li>
+                <li>Should have a <code>data-vv-value-path</code> attribute which denotes how to access the value from within that component (Needed for <code>validateAll</code> calls)</li>
+            </ul>
+        </p>
+        <component-example></component-example>
     </div>
 </template>
 
@@ -147,6 +158,7 @@ import RadioButtonsExample from './../components/examples/RadioButtons.vue';
 import CheckboxExample from './../components/examples/Checkbox.vue';
 import FlagsExample from './../components/examples/Flags.vue';
 import SelectorsExample from './../components/examples/Selectors.vue';
+import ComponentExample from './../components/examples/Component.vue';
 
 export default {
     components: {
@@ -160,7 +172,8 @@ export default {
         RadioButtonsExample,
         CheckboxExample,
         FlagsExample,
-        SelectorsExample
+        SelectorsExample,
+        ComponentExample
     }
 };
 </script>
