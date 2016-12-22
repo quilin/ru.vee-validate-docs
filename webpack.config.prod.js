@@ -21,7 +21,7 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env': {
                 BABEL_ENV: JSON.stringify(process.env.NODE_ENV),
-                NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+                NODE_ENV: JSON.stringify('production')
             },
         }),
         new webpack.LoaderOptionsPlugin({
