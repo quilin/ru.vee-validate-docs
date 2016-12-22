@@ -18,15 +18,15 @@
             You can install this plugin via <a class="link" href="#npm">npm</a> or <a class="link" href="#bower">bower</a> or via a <a class="link" href="#cdn">CDN</a>.
             <h2 id="npm" class="title is-4"><a href="#npm">npm</a></h2>
             <b>Vue 1.x</b>
-            <code-block class="language-bash">npm install vee-validate --save</code-block>
+            <code-block class="language-bash">npm install vee-validate@prev --save</code-block>
             <b>Vue 2.x</b>
-            <code-block class="language-bash">npm install vee-validate@next --save</code-block>
+            <code-block class="language-bash">npm install vee-validate --save</code-block>
 
             <h2 id="bower" class="title is-4"><a href="#bower">bower</a></h2>
             <b>Vue 1.x</b>
-            <code-block class="language-bash">bower install vee-validate#1.0.0-beta.10 --save</code-block>
+            <code-block class="language-bash">bower install vee-validate#1.0.0-beta.11 --save</code-block>
             <b>Vue 2.x</b>
-            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.15 --save</code-block>
+            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.18 --save</code-block>
 
             <h2 id="cdn" class="title is-4"><a href="#cdn">CDN</a></h2>
             Head over to <a href="https://www.jsdelivr.com/projects/vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
@@ -112,6 +112,7 @@
         </code-block>
         <ul class="list-circle">
             <li><code class="inline">errorBagName:</code> The name of the ErrorBag object that will be injected in each of Vue's instances' data.</li>
+            <li><code class="inline">fieldBagName:</code> The name of the FieldBag object that will be injected All Vue instances.</li>
             <li><code class="inline">delay:</code> The default debounce time for all inputs (only affects validations).</li>
             <li><code class="inline">locale:</code> The default language for the validation messages.</li>
             <li><code class="inline">messages:</code> The messages to be generated for the validation errors, check <router-link class="link" :to="{ name: 'rules', hash: '#custom-messages' }">custom messages</router-link> section.</li>

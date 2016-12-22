@@ -26,8 +26,7 @@
             </code-block>
             Whenever the binding value is updated, the validator will validate the new value automatically.
             <note>
-                The plugin will use the data in your vue instance as the source of the input value, meaning it won't be watching the input via events anymore.
-                And as you noticed, you don't need to provide a <code>name</code> attribute, as the expression name will be used instead.
+                The plugin will use the data in your vue instance as the source of the input value, meaning it won't be watching the input via events anymore. Still you must provide a <code>name</code> or <code>data-vv-name</code> attributes.
             </note>
          </p>
          <data-example></data-example>

@@ -98,7 +98,7 @@ export default {
     created() {
         this.$validator.updateDictionary({
             ar: {
-                messages: messages.default,
+                messages,
                 attributes: {
                     email: 'البريد الاليكتروني',
                     phone: 'رقم الهاتف'
