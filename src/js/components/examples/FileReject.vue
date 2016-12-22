@@ -4,7 +4,7 @@
             <div class="column is-12">
                 <label class="label">Image (Doesn't Reject)</label>
                 <p class="control has-icon has-icon-right">
-                    <input name="image" v-validate data-vv-rules="mimes:image/" :class="{ 'is-danger': errors.has('image') }" type="file">
+                    <input name="image" v-validate data-vv-rules="mimes:image/*" :class="{ 'is-danger': errors.has('image') }" type="file">
                     <i v-show="errors.has('image')" class="fa fa-warning"></i>
                     <span v-show="errors.has('image')" class="help is-danger">{{ errors.first('image') }}</span>
                 </p>
@@ -12,7 +12,7 @@
             <div class="column is-12">
                 <label class="label">Image (Rejects)</label>
                 <p class="control has-icon has-icon-right">
-                    <input name="file" v-validate.reject data-vv-rules="mimes:image/" :class="{ 'is-danger': errors.has('file') }" type="file">
+                    <input name="file" v-validate.reject data-vv-rules="mimes:image/*" :class="{ 'is-danger': errors.has('file') }" type="file">
                     <i v-show="errors.has('file')" class="fa fa-warning"></i>
                     <span v-show="errors.has('file')" class="help is-danger">{{ errors.first('file') }}</span>
                 </p>
