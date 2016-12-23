@@ -102,9 +102,10 @@
 
             const config = {
                 errorBagName: 'errors', // change if property conflicts.
+                fieldsBagName: 'fields',
                 delay: 0,
                 locale: 'en',
-                messages: null,
+                dictionary: null,
                 strict: true
             };
 
@@ -112,10 +113,10 @@
         </code-block>
         <ul class="list-circle">
             <li><code class="inline">errorBagName:</code> The name of the ErrorBag object that will be injected in each of Vue's instances' data.</li>
-            <li><code class="inline">fieldBagName:</code> The name of the FieldBag object that will be injected All Vue instances.</li>
+            <li><code class="inline">fieldsBagName:</code> The name of the FieldBag object that will be injected All Vue instances.</li>
             <li><code class="inline">delay:</code> The default debounce time for all inputs (only affects validations).</li>
             <li><code class="inline">locale:</code> The default language for the validation messages.</li>
-            <li><code class="inline">messages:</code> The messages to be generated for the validation errors, check <router-link class="link" :to="{ name: 'rules', hash: '#custom-messages' }">custom messages</router-link> section.</li>
+            <li><code class="inline">dictionary:</code> A dictionary to be merged with the validators dictionary, check <router-link class="link" :to="{ name: 'rules', hash: '#custom-messages' }">custom messages</router-link> and <router-link class="link" :to="{ name: 'localization' }">localization</router-link> sections.</li>
             <li><code class="inline">strict:</code> Fields that have no rules will fail validation unless <code class="inline">strict</code> is set to false.</li>
         </ul>
     </div>

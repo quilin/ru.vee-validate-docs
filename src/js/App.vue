@@ -24,7 +24,7 @@
                 </section>
                 <div class="container">
                     <div class="column content-container is-mobile">
-                        <transition name="fade" mode="out-in">
+                        <transition @after-leave="afterLeave" name="fade" mode="out-in">
                             <router-view></router-view>
                         </transition>
                     </div>
@@ -43,6 +43,15 @@ export default {
     }),
     components: {
         SideMenu
+    },
+    methods: {
+        afterLeave() {
+            if (this.$route.hash) {
+                const hash = this.$route.hash;
+                window.location.hash = '';
+                window.location.hash = hash;
+            }
+        }
     }
 };
 </script>
