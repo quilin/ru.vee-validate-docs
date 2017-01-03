@@ -50,9 +50,9 @@
                 },
                 {
                     name: 'collect',
-                    params: '{String name?},{String scope?}',
+                    params: '{String name?},{String scope?}, {Boolean mapped?}',
                     returns: 'Array|Object',
-                    description: 'Collects errors associated with a specific field. not passing the field name will group all errors by field name instead. specifying a scope will limit the collecting behavior to a specific scope.'
+                    description: 'Collects errors associated with a specific field. not passing the field name will group all errors by field name instead. specifying a scope will limit the collecting behavior to a specific scope. You can optionally specify if the errors objects should be mapped to error messages or not, providing false will return objects containing the full information about the error.'
                 },
                 {
                     name: 'count',
