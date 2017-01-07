@@ -98,6 +98,18 @@
                     </p>
                 </div>
             </div>
+            <div class="rule" id="rule-alpha_spaces">
+                <b class="important">alpha_spaces</b>
+                <div class="description">
+                    The field under validation may contain alphabetic characters or spaces.
+                </div>
+                <div>
+                    <p class="control">
+                        <input v-validate data-vv-rules="alpha_spaces" :class="{'input': true, 'is-danger': errors.has('alpha_spaces_field') }" name="alpha_spaces_field" type="text" placeholder="Enter characters and spaces">
+                        <span v-show="errors.has('alpha_spaces_field')" class="help is-danger">{{ errors.first('alpha_spaces_field') }}</span>
+                    </p>
+                </div>
+            </div>
             <div class="rule" id="rule-before">
                 <b class="important">before:{target}</b>
                 <div class="description">
@@ -150,6 +162,18 @@
                     </p>
                     <p class="control">
                         <input name="pw_confirm" :class="{'input': true, 'is-danger': errors.has('confirm_field') }" type="password" placeholder="Confirm the password">
+                    </p>
+                </div>
+            </div>
+            <div class="rule" id="rule-credit_card">
+                <b class="important">credit_card</b>
+                <div class="description">
+                    The field under validation must be a valid credit card.
+                </div>
+                <div>
+                    <p class="control">
+                        <input v-validate data-vv-rules="credit_card" :class="{'input': true, 'is-danger': errors.has('credit_field') }" name="credit_field" type="text" placeholder="Enter A Credit Card Number">
+                        <span v-show="errors.has('credit_field')" class="help is-danger">{{ errors.first('credit_field') }}</span>
                     </p>
                 </div>
             </div>
@@ -336,6 +360,24 @@
                     </p>
                 </div>
             </div>
+            <div class="rule" id="rule-max_value">
+                <b class="important">max_value:{value}</b>
+                <div class="description">
+                    The field under validation must be numeric value and must not be greater than the specified value.
+                </div>
+                <div class="args">
+                    <span class="args__title">args:</span>
+                    <ul>
+                        <li><code class="inline">value:</code> A numeric value representing the greatest value allowed.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="control">
+                        <input v-validate data-vv-rules="max_value:9000" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('max_value_field') }" name="max_value_field" type="text" placeholder="Can you go over 9000?">
+                        <span v-show="errors.has('max_value_field')" class="help is-danger">{{ errors.first('max_value_field') }}</span>
+                    </p>
+                </div>
+            </div>
             <div class="rule" id="rule-mimes">
                 <b class="important">mimes:[list]</b>
                 <div class="description">
@@ -370,6 +412,24 @@
                     <p class="control">
                         <input v-validate data-vv-rules="min:3" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('min_field') }" name="min_field" type="text" placeholder="Min: 3">
                         <span v-show="errors.has('min_field')" class="help is-danger">{{ errors.first('min_field') }}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="rule" id="rule-min_value">
+                <b class="important">min_value:{value}</b>
+                <div class="description">
+                    The field under validation must be numeric value and must not be lesser than the specified value.
+                </div>
+                <div class="args">
+                    <span class="args__title">args:</span>
+                    <ul>
+                        <li><code class="inline">value:</code> A numeric value representing the lowest value allowed.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="control">
+                        <input v-validate data-vv-rules="min_value:10" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('min_value_field') }" name="min_value_field" type="text" placeholder="What is bigger than 10?">
+                        <span v-show="errors.has('min_value_field')" class="help is-danger">{{ errors.first('min_value_field') }}</span>
                     </p>
                 </div>
             </div>
