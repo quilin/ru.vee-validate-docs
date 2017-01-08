@@ -1,6 +1,15 @@
 <template>
     <aside class="menu sidebar">
-        <a class="github-button" href="https://github.com/logaretm/vee-validate" data-vv-icon="octicon-star" data-vv-style="mega" data-vv-count-href="/logaretm/vee-validate/stargazers" data-vv-count-api="/repos/logaretm/vee-validate#stargazers_count" data-vv-count-aria-label="# stargazers on GitHub" aria-label="Star logaretm/vee-validate on GitHub">Star</a>
+        <animated-button link="https://github.com/logaretm/vee-validate">
+            <div class="flex-div" slot="default">
+                <svg class="icon"><use xlink:href="#github"></use></svg>
+                Star
+            </div>
+            <div class="flex-div" slot="hover">
+                <svg class="icon"><use xlink:href="#i-star"></use></svg>
+                {{ stars }}
+            </div>
+        </animated-button>
         <p class="menu-label">
             Getting Started
         </p>
@@ -76,3 +85,23 @@
         </ul>
     </aside>
 </template>
+
+<script>
+    import AnimatedButton from './AnimatedButton.vue';
+    import axios from 'axios';
+
+    export default {
+        name: 'side-menu',
+        components: {
+            AnimatedButton
+        },
+        data: () => ({
+            stars: 0
+        }),
+        created() {
+            axios.get('https://api.github.com/repos/logaretm/vee-validate').then(response => {
+                this.stars = response.data.stargazers_count;
+            });
+        }
+    };
+</script>
