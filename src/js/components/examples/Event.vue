@@ -46,7 +46,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input name=&quote;email&quote; v-model=&quot;email&quot; v-validate.initial=&quot;email&quot; data-vv-rules=&quot;required|email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+                        &lt;input name=&quot;email&quot; v-model=&quot;email&quot; v-validate.initial=&quot;email&quot; data-vv-rules=&quot;required|email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
                         &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('email') }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
@@ -54,7 +54,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;Name&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input name=&quote;name&quote; v-model=&quot;name&quot; v-validate.initial=&quot;name&quot; data-vv-rules=&quot;required|alpha&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
+                        &lt;input name=&quot;name&quot; v-model=&quot;name&quot; v-validate.initial=&quot;name&quot; data-vv-rules=&quot;required|alpha&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
                         &lt;i v-show=&quot;errors.has('name')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has('name')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('name') }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
@@ -62,7 +62,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;Phone&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input name=&quote;phone&quote; v-model=&quot;phone&quot; v-validate.initial=&quot;phone&quot; data-vv-rules=&quot;required|numeric&quot; :class=&quot;{'input': true, 'is-danger': errors.has('phone') }&quot; type=&quot;text&quot; placeholder=&quot;Phone&quot;&gt;
+                        &lt;input name=&quot;phone&quot; v-model=&quot;phone&quot; v-validate.initial=&quot;phone&quot; data-vv-rules=&quot;required|numeric&quot; :class=&quot;{'input': true, 'is-danger': errors.has('phone') }&quot; type=&quot;text&quot; placeholder=&quot;Phone&quot;&gt;
                         &lt;i v-show=&quot;errors.has('phone')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has('phone')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('phone') }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
@@ -70,7 +70,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;Website&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input name=&quote;url&quote; v-model=&quot;url&quot; v-validate.initial=&quot;url&quot; data-vv-rules=&quot;required|url&quot; :class=&quot;{'input': true, 'is-danger': errors.has('url') }&quot; type=&quot;text&quot; placeholder=&quot;Website&quot;&gt;
+                        &lt;input name=&quot;url&quot; v-model=&quot;url&quot; v-validate.initial=&quot;url&quot; data-vv-rules=&quot;required|url&quot; :class=&quot;{'input': true, 'is-danger': errors.has('url') }&quot; type=&quot;text&quot; placeholder=&quot;Website&quot;&gt;
                         &lt;i v-show=&quot;errors.has('url')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has('url')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('url') }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
@@ -98,7 +98,7 @@
                 },
                 methods: {
                     validateBeforeSubmit() {
-                        // Validate All returns a promise and provides the validation result.                
+                        // Validate All returns a promise and provides the validation result.
                         this.$validator.validateAll().then(success => {
                             if (! success) {
                                 // handle error
