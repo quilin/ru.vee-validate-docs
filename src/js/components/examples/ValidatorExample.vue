@@ -86,7 +86,7 @@
                         email: 'required|email',
                         name: 'required|alpha|min:3'
                     });
-                    this.$set('errors', this.validator.errorBag); // update the data.
+                    this.$set(this, 'errors', this.validator.errorBag); // update the data.
                 }
             });
         </div>
