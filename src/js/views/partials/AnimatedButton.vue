@@ -16,7 +16,7 @@
             shown: 'default'
         }),
         methods: {
-            mouseEnter() { 
+            mouseEnter() {
                 this.shown = 'hover';
             },
             mouseLeave() {

@@ -68,6 +68,7 @@
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#flags-example'}">Validation Flags</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#selectors-example'}">Error Selectors</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#component-example'}">Component Validation</router-link></li>
+            <li><router-link active-class="is-active" :to="{ name: 'examples', hash: '#event-bus-example'}">Event Bus</router-link></li>
         </ul>
         <p class="menu-label">
             API
@@ -87,8 +88,8 @@
 </template>
 
 <script>
-    import AnimatedButton from './AnimatedButton.vue';
     import axios from 'axios';
+    import AnimatedButton from './AnimatedButton.vue';
 
     export default {
         name: 'side-menu',

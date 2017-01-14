@@ -143,6 +143,15 @@
             </ul>
         </p>
         <component-example></component-example>
+        <h2 id="event-bus-example" class="title is-4"><a href="#event-bus-example">Event Bus</a></h2>
+        <p>
+            There are situations where you need to 'transfer' or communicate errors from child components to their parent and vice versa.
+            Although this is not related to the plugin, the need is common enough to require an example.
+            <br><br>
+            This example uses Vue.js event bus to communicate errors with the parent component, the parent component can also clear, or force validate the child component.
+            <a href="https://gist.github.com/sproogen/147d75db261505e8a558a7fd11a20551" target="github">Original example</a> was created by <a href="https://gist.github.com/sproogen" target="github">@sproogen</a>.
+        </p>
+        <event-bus-example></event-bus-example>
     </div>
 </template>
 
@@ -159,6 +168,7 @@ import CheckboxExample from './../components/examples/Checkbox.vue';
 import FlagsExample from './../components/examples/Flags.vue';
 import SelectorsExample from './../components/examples/Selectors.vue';
 import ComponentExample from './../components/examples/Component.vue';
+import EventBusExample from './../components/examples/EventBusParent.vue';
 
 export default {
     components: {
@@ -173,7 +183,8 @@ export default {
         CheckboxExample,
         FlagsExample,
         SelectorsExample,
-        ComponentExample
+        ComponentExample,
+        EventBusExample
     }
 };
 </script>
