@@ -521,19 +521,19 @@
                 </div>
             </div>
             <div class="rule" id="rule-url">
-                <b class="important">url:{domain?}</b>
+                <b class="important">url:{require_protocol?}</b>
                 <div class="description">
-                    The field under validation must be a valid url. A domain may be optionally passed. It supports subdomains.
+                    The field under validation must be a valid url. Protocols are not required by default.
                 </div>
                 <div class="args">
                     <span class="args__title">args:</span>
                     <ul>
-                        <li><code class="inline">domain:</code> Adds another check if the url belongs to a specific domain. tlds should improve the accuracy.</li>
+                        <li><code class="inline">require_protocol:</code> If the protocol should be required, false by default. passing anything will require it.</li>
                     </ul>
                 </div>
                 <div>
                     <p class="control">
-                        <input v-validate data-vv-rules="url:google.com" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('url_field') }" name="url_field" type="text" placeholder="Enter a google.com domain url">
+                        <input v-validate data-vv-rules="url:require_protocol" data-vv-as="field" :class="{'input': true, 'is-danger': errors.has('url_field') }" name="url_field" type="text" placeholder="Enter a url">
                         <span v-show="errors.has('url_field')" class="help is-danger">{{ errors.first('url_field') }}</span>
                     </p>
                 </div>
