@@ -1,3 +1,5 @@
+Russian Translation Repo (remove this line before merging)
+
 # vee-validate Docs
 
 This is the documentation for the [vee-validate](https://github.com/logaretm/vee-validate) plugin hosted by Github. It uses Vue.js along with Vue.js Router. Webpack for bundling things. The site is served from the `docs` folder.
