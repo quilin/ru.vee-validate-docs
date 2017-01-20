@@ -41,7 +41,7 @@
                 dictionary: { // dictionary object
                     en: {  // locale key
                         attributes: attributesEn // English attributes
-                    }
+                    },
                     ar: {   // locale key
                         messages: messagesAr,   // Arabic messages
                         attributes: attributesAr  // Arabic attributes
