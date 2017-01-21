@@ -86,6 +86,7 @@
                         email: 'required|email',
                         name: 'required|alpha|min:3'
                     });
+                    this.validator.init();
                     this.$set(this, 'errors', this.validator.errorBag); // update the data.
                 }
             });
@@ -127,6 +128,7 @@ export default {
             email: 'required|email',
             name: 'required|alpha|min:3'
         });
+        this.validator.init();
         this.$set(this, 'errors', this.validator.errorBag);
     }
 };

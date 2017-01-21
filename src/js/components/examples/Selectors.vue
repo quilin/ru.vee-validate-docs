@@ -10,7 +10,7 @@
             <div class="column is-12">
                 <label class="label">The Value</label>
                 <p class="control has-icon has-icon-right">
-                    <input name="name" v-validate data-vv-rules="required|alpha_spaces|min:3" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
+                    <input name="name" v-validate="'required|alpha_spaces|min:3'" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
                     <i v-show="errors.has(`name${rule ? ':' + rule : ''}`)" class="fa fa-warning"></i>
                     <span v-show="errors.has(`name${rule ? ':' + rule : ''}`)" class="help is-danger">{{ errors.first(`name${rule ? ':' + rule : ''}`) }}</span>
                 </p>
@@ -28,7 +28,7 @@
                 &lt;div class=&quot;column is-12&quot;&gt;
                     &lt;label class=&quot;label&quot;&gt;The Value&lt;/label&gt;
                     &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
-                        &lt;input name=&quot;name&quot; v-validate data-vv-rules=&quot;required|alpha_spaces|min:3&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
+                        &lt;input name=&quot;name&quot; v-validate=&quot;'required|alpha_spaces|min:3'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
                         &lt;i v-show=&quot;errors.has(`name${rule ? ':' + rule : ''}`)&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
                         &lt;span v-show=&quot;errors.has(`name${rule ? ':' + rule : ''}`)&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first(`name${rule ? ':' + rule : ''}`) }" + "}" }}&lt;/span&gt;
                     &lt;/p&gt;
