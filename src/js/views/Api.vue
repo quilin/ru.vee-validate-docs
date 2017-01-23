@@ -2,7 +2,7 @@
     <div>
         <h2 id="data-attributes" class="title is-4"><a href="#data-attributes">data-* Attributes</a></h2>
         <p>
-            data-* attributes are the plugin's interface to specify what exactly should happen, providing a simple and Vue version-compatiable API.
+            data-* attributes provide an alternate interface for the plugin to specify what exactly should happen, providing a simple and Vue version-compatiable API. They are useful if you do not like to pass complex expressions to the directive.
         </p>
         <br>
         <data-attributes-api></data-attributes-api>

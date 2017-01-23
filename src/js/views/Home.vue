@@ -26,7 +26,7 @@
             <b>Vue 1.x</b>
             <code-block class="language-bash">bower install vee-validate#1.0.0-beta.11 --save</code-block>
             <b>Vue 2.x</b>
-            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.18 --save</code-block>
+            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.19 --save</code-block>
 
             <h2 id="cdn" class="title is-4"><a href="#cdn">CDN</a></h2>
             Head over to <a href="https://www.jsdelivr.com/projects/vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
@@ -52,10 +52,10 @@
         <p>
             All you need is to add the <code class="inline">v-validate</code> directive to the input you wish to validate.
             <br><br>
-            Then add a <code class="inline">data-vv-rules</code> attribute which contains a list of validation rules separated by a pipe '<code class="inline">|</code>'.
+            Then pass to the directive a <code class="inline">rules</code> string which contains a list of validation rules separated by a pipe '<code class="inline">|</code>'.
             For the following example the validation rules are straight forward, use <code class="inline">required</code> to indicate that the field is required.
             And <code class="inline">email</code> to indicate that the field must be an email.
-            To combine both rules we assign the value <code class="inline">required|email</code> to the <code class="inline">data-vv-rules</code> data-vv-set attribute.
+            To combine both rules we assign the value <code class="inline">required|email</code> to the <code class="inline">v-validate</code> expression value.
         </p>
         <basic-example></basic-example>
         <div class="flex-center"><router-link class="link" :to="{ name: 'examples' }">More Examples</router-link></div>
