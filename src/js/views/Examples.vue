@@ -34,7 +34,7 @@
             <note>
                 Notice that the <code>email</code> field was immediatly validated when you open the page, you may not want this behavior, use the <code>initial</code> modifier to tell the validator to ignore the first evaluation like this: <code>v-validate.initial</code>.
                 <br>For example the name field above didn't display any errors when you opened this page.
-                This attribute is only relevant when validating using args, it has no effect otherwise.
+                The <code>initial</code> modifier is only relevant when validating using args, it has no effect otherwise.
             </note>
             <note>
                 When you provide an arg to the directive, <code>delay</code> attribute and <code>reject</code> modifier won't have an effect anymore. so you might want to handle debouncing the inputs yourself.
@@ -63,7 +63,8 @@
             <br><br>
             You can tell the validator to scope the fields by adding a <code class="inline">data-vv-scope</code> attribute which tells the validator the name of the scope. Those fields will be then identified using their name and their scope. but currently that does not allow multiple fields with the same name, it just allows you to control validation and display errors for different scopes, and allows you to group inputs within a specific scope.
             <br><br>
-            For convienece you may add the <code class="inline">data-vv-scope</code> on the form that owns the inputs, you don't have to add the attribute on each and every input.
+            For convienece you may add the <code class="inline">data-vv-scope</code> attribute on the form that owns the inputs, you don't have to add the attribute on each and every input.
+            You can also pass <code>scope</code> property to the validator expression.
          </p>
          <scope-example></scope-example>
          <h2 id="coupon-example" class="title is-4"><a href="#coupon-example">Custom Rule: Coupon</a></h2>

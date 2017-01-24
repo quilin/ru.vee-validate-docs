@@ -1,5 +1,50 @@
 <template>
     <div>
+        <h2 id="directive" class="title is-4"><a href="#directive">v-validate Directive</a></h2>
+        <p>
+            The <code>v-validate</code> directive is the main way to validate your inputs, the directive accepts either a string or an object as a value.
+            <br>
+            If a string was passed it must be a valid rules string, that is the validation rules seperated by pipes '|'.
+            <code-block class="language-html">
+                &lt;input v-validate=&quot;'required|email'&quot; name=&quot;field&quot; type=&quot;text&quot;&gt;
+            </code-block>
+            <br>
+            If an object was passed it must contain a rules property which can be either a rule string like above or an object, along with the following:
+            <code-block class="language-javascript">
+                const expression = {
+                    rules: 'required|regex:^[0-9]+$', // required
+                    scope: 'myscope', // optional
+                    arg: 'form.email' // optional
+                };
+                
+                // Or use the object form for increased flexibility.
+                const expression = {
+                    rules: {
+                        // parameterless rules take a boolean value.
+                        required: true,
+                        // single parameter rules take a single value.
+                        regex: /.(js|ts)$/,
+                        // multiple paramter rules take a single array.
+                        in: [1, 2, 3]
+                    },
+                    scope: 'myscope',
+                    arg: 'from.email'
+                };
+            </code-block>
+            <h2 class="title is-5"><a href="#directive-args">args</a></h2>
+            The directive also accepts an arg, that denotes the name of the vue model to validate.
+            <code-block class="language-html">
+                &lt;input v-model=&quot;email&quot; v-validate:email=&quot;'required|email'&quot; name=&quot;field&quot; type=&quot;text&quot;&gt;
+            </code-block>
+            <code-block class="language-javascript">
+                export default {
+                    data: () => ({
+                        email: ''
+                    })
+                };
+            </code-block>
+            For more complex args like a nested model, you may want to pass an object to the directive containing an <code>arg</code> property which is mentioned above. Don't forget to send a <code>rules</code> property as well.
+        </p>
         <h2 id="data-attributes" class="title is-4"><a href="#data-attributes">data-* Attributes</a></h2>
         <p>
             data-* attributes provide an alternate interface for the plugin to specify what exactly should happen, providing a simple and Vue version-compatiable API. They are useful if you do not like to pass complex expressions to the directive.
@@ -42,7 +87,7 @@
                 const validator = new Validator();
 
                 validator.attach('email', 'required|email'); // attach field.
-                validator.attach('name', 'required|alpha', 'Full Name'); // attach field with display name for error generation.
+                validator.attach('name', 'required|alpha', { prettyName: 'Full Name' }); // attach field with display name for error generation.
 
                 validator.detach('email'); // you can also detach fields.
             </code-block>
@@ -83,7 +128,7 @@
 
                 // Also exposed on the class.
                 Validator.setLocale('ar'); // Set all validator locales to 'ar'.
-                Validator.create().locale // 'ar';
+                Validator.create().getLocale() // 'ar';
 
                 Validator.setLocale(); // resets to english because no argument was passed, all validators will be switched to English.
             </code-block>

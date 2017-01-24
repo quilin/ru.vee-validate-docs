@@ -1,7 +1,7 @@
 <template>
     <code-example>
         <div class="columns is-multiline" slot="example">
-            <form @submit.prevent="validateForm('form-1')" class="columns column is-multiline is-12" v-scope="'form-1'">
+            <form @submit.prevent="validateForm('form-1')" class="columns column is-multiline is-12" data-vv-scope="form-1">
                 <legend>Form 1</legend>
                 <div class="column is-12">
                     <label class="label">Email</label>
@@ -56,7 +56,7 @@
 
         <div slot="code-html">
             &lt;div class=&quot;columns is-multiline&quot;&gt;
-                &lt;form @submit.prevent=&quot;validateForm('form-1')&quot; class=&quot;columns column is-multiline is-12&quot; v-scope=&quot;'form-1'&quot;&gt;
+                &lt;form @submit.prevent=&quot;validateForm('form-1')&quot; class=&quot;columns column is-multiline is-12&quot; data-vv-scope=&quot;form-1&quot;&gt;
                     &lt;legend&gt;Form 1&lt;/legend&gt;
                     &lt;div class=&quot;column is-12&quot;&gt;
                         &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
