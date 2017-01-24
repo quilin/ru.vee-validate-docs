@@ -2,7 +2,7 @@
     <code-example>
         <div slot="example" class="columns is-multiline">
             <div class="column is-12">
-                <custom-input v-validate data-vv-rules="required|email" data-vv-value-path="innerValue" data-vv-name="custom" label="Email" :has-error="errors.has('custom')">
+                <custom-input v-validate="'required|email'" data-vv-value-path="innerValue" data-vv-name="custom" label="Email" :has-error="errors.has('custom')">
                 </custom-input>
                 <span v-show="errors.has('custom')" class="help is-danger">{{ errors.first('custom') }}</span>
                 <button @click="validate" type="button" class="button is-primary">Validate All</button>
@@ -23,7 +23,7 @@
             &lt;!-- Example.vue :: The Parent that contains the input --&gt;
             &lt;div class=&quot;columns is-multiline&quot;&gt;
                 &lt;div class=&quot;column is-12&quot;&gt;
-                    &lt;custom-input v-validate data-vv-rules=&quot;required|email&quot; data-vv-value-path=&quot;innerValue&quot; data-vv-name=&quot;custom&quot; label=&quot;Email&quot; :has-error=&quot;errors.has('custom')&quot;&gt;
+                    &lt;custom-input v-validate=&quot;'required|email'&quot; data-vv-value-path=&quot;innerValue&quot; data-vv-name=&quot;custom&quot; label=&quot;Email&quot; :has-error=&quot;errors.has('custom')&quot;&gt;
                     &lt;/custom-input&gt;
                     &lt;span v-show=&quot;errors.has('custom')&quot; class=&quot;help is-danger&quot;&gt;{{ "{" + "{ errors.first('custom') }" + "}" }}&lt;/span&gt;
                     &lt;button @click=&quot;validate&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Validate All&lt;/button&gt;

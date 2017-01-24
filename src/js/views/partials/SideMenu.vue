@@ -74,6 +74,7 @@
             API
         </p>
         <ul class="menu-list">
+            <li><router-link active-class="is-active" :to="{ name: 'api', hash: '#directive'}">v-validate</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'api', hash: '#data-attributes'}">data-* Attributes</router-link></li>
             <li><router-link active-class="is-active" :to="{ name: 'api', hash: '#error-bag'}">Error Bag</router-link></li>
             <li>

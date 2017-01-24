@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.css';
 import Vue from 'vue';
 import moment from 'moment';
 import VueRouter from 'vue-router';
-import VeeValidate, { Validator } from 'vee-validate';
+import VeeValidate, { Validator } from './vee-validate';
 import Components from './components';
 import App from './App.vue';
 import routerConfig from './routerConfig';
