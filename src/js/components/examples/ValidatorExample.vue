@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import { Validator } from '../../vee-validate';
+import { Validator } from 'vee-validate';
 
 export default {
     validator: null,
