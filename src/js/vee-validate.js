@@ -1001,7 +1001,6 @@ var ValidatorException = (function () {
     return anonymous;
 }());
 
-var arguments$1 = arguments;
 /**
  * Gets the data attribute. the name must be kebab-case.
  */
@@ -1022,16 +1021,22 @@ var getScope = function (el) {
 /**
  * Debounces a function.
  */
-var debounce = function (callback, wait, context) {
-    var timeout = null;
-    var callbackArgs = null;
+var debounce = function (callback, wait, immediate) {
+    if ( wait === void 0 ) wait = 0;
 
-    var later = function () { return callback.apply(context, callbackArgs); };
-
+    var timeout;
     return function () {
-        callbackArgs = arguments$1;
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+
+        var later = function () {
+            timeout = null;
+            if (!immediate) { callback.apply(void 0, args); }
+        };
+        var callNow = immediate && !timeout;
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
+        if (callNow) { callback(args); }
     };
 };
 
@@ -2398,6 +2403,18 @@ ListenerGenerator.prototype._hasFieldDependency = function _hasFieldDependency (
         return false;
     }
 
+    if (isObject(rules)) {
+        Object.keys(rules).forEach(function (r) {
+            if (/confirmed|after|before/.test(r)) {
+                fieldName = rules[r];
+
+                return false;
+            }
+        });
+
+        return fieldName;
+    }
+
     rules.split('|').every(function (r) {
         if (/\b(confirmed|after|before):/.test(r)) {
             fieldName = r.split(':')[1];
@@ -2572,8 +2589,8 @@ ListenerGenerator.prototype._attachComponentListeners = function _attachComponen
         var this$1 = this;
 
     this.componentListener = debounce(function (value) {
-        this$1.vm.$validator.validate(this$1.fieldName, value);
-    }, getDataAttribute(this.el, 'delay') || this.options.delay, this);
+        this$1._validate(value);
+    }, getDataAttribute(this.el, 'delay') || this.options.delay);
 
     this.component.$on('input', this.componentListener);
 };
@@ -2727,7 +2744,7 @@ ListenerGenerator.prototype.detach = function detach () {
 
 var listenersInstances = [];
 
-var validate = function (options) { return ({
+var directive = function (options) { return ({
     bind: function bind(el, binding, vnode) {
         var listener = new ListenerGenerator(el, binding, vnode, options);
         listener.attach();
@@ -2765,20 +2782,6 @@ var validate = function (options) { return ({
 }); };
 
 // eslint-disable-next-line
-var scope = function (options) { return ({
-    bind: function bind(el, binding, vnode) {
-        var scope = binding.arg || binding.value || getDataAttribute('scope');
-        vnode.context.$validator.addScope(scope);
-        el.setAttribute('data-vv-scope', scope);
-    }
-}); };
-
-var directives = function (Vue, options) {
-    Vue.directive('validate', validate(options));
-    Vue.directive('scope', scope(options));
-};
-
-// eslint-disable-next-line
 var install = function (Vue, ref) {
     if ( ref === void 0 ) ref = {};
     var locale = ref.locale; if ( locale === void 0 ) locale = 'en';
@@ -2812,14 +2815,14 @@ var install = function (Vue, ref) {
     });
 
     Vue.mixin(mixin(options)); // Install Mixin.
-    Vue.use(directives, options); // Install directives.
+    Vue.directive('validate', directive(options));
 };
 
 var index = {
     install: install,
     Validator: Validator,
     ErrorBag: ErrorBag,
-    version: '2.0.0-beta.19'
+    version: '2.0.0-beta.20'
 };
 
 return index;
