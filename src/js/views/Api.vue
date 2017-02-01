@@ -45,6 +45,9 @@
             </code-block>
             For more complex args like a nested model, you may want to pass an object to the directive containing an <code>arg</code> property which is mentioned above. Don't forget to send a <code>rules</code> property as well.
         </p>
+        <note>
+            As of version <code>2.0.0-beta.22</code> you do not have to specify an arg at all, if your input/component has <code>v-model</code> bound on, it will work without specifying the arg. As the plugin will figure out the model and watch for its changes.
+        </note>
         <h2 id="data-attributes" class="title is-4"><a href="#data-attributes">data-* Attributes</a></h2>
         <p>
             data-* attributes provide an alternate interface for the plugin to specify what exactly should happen, providing a simple and Vue version-compatiable API. They are useful if you do not like to pass complex expressions to the directive.

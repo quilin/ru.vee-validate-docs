@@ -105,7 +105,16 @@
                 delay: 0,
                 locale: 'en',
                 dictionary: null,
-                strict: true
+                strict: true,
+                enableAutoClasses: false,
+                classNames: {
+                    touched: 'touched', // the control has been blurred
+                    untouched: 'untouched', // the control hasn't been blurred
+                    valid: 'valid', // model is valid
+                    invalid: 'invalid', // model is invalid
+                    pristine: 'pristine', // control has not been interacted with
+                    dirty: 'dirty' // control has been interacted with
+                }
             };
 
             Vue.use(VeeValidate, config);
@@ -117,6 +126,8 @@
             <li><code class="inline">locale:</code> The default language for the validation messages.</li>
             <li><code class="inline">dictionary:</code> A dictionary to be merged with the validators dictionary, check <router-link class="link" :to="{ name: 'rules', hash: '#custom-messages' }">custom messages</router-link> and <router-link class="link" :to="{ name: 'localization' }">localization</router-link> sections.</li>
             <li><code class="inline">strict:</code> Fields that have no rules will fail validation unless <code class="inline">strict</code> is set to false.</li>
+            <li><code class="inline">enableAutoClasses:</code>Applies automatic classes on inputs or components root elements being validated.</li>
+            <li><code class="inline">classNames:</code>The classes to be applied depending on the state of the input.</li>
         </ul>
     </div>
 </template>
