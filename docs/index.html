@@ -59,9 +59,9 @@ Vue.use(VeeValidate);
 <li><code>any()</code> Checks if there are any errors.</li>
 </ul>
 <p>There are a few more <a href="api.html#error-bag">methods</a> that you can use to manipulate the errors object.</p>
-<div class="rule-list columns is-mobile"><h2><a href="#available-rules">Available Rules</a></h2>
+<h2><a href="#available-rules">Available Rules</a></h2>
 <p>There are more than 20 rules available to validate your inputs:</p>
-<ul>
+<div class="columns is-mobile rule-list"><ul>
 <li><a href="rules.html#rule-after">after</a></li>
 <li><a href="rules.html#rule-alpha">alpha</a></li>
 <li><a href="rules.html#rule-alpha_dash">alpha_dash</a></li>
@@ -97,8 +97,8 @@ Vue.use(VeeValidate);
 <li><a href="rules.html#rule-size">size</a></li>
 <li><a href="rules.html#rule-url">url</a></li>
 </ul>
-<p>Visit the <a href="rules.html#available-rules">rules documentation</a> to learn more about how to use each rule, and how to <a href="rules.html#custom-rules">create your own</a>.</p>
-</div><h2><a href="#configuration">Configuration</a></h2>
+</div><p>Visit the <a href="rules.html#available-rules">rules documentation</a> to learn more about how to use each rule, and how to <a href="rules.html#custom-rules">create your own</a>.</p>
+<h2><a href="#configuration">Configuration</a></h2>
 <p>You may need to configure some options to tweak some of the plugin internals, this is not required, but could cause conflicts. For example: if you are using a property called <code>errors</code> on your vue instance this may cause conflicts. Here is how you would set up the options along with the default values:</p>
 <pre><code class="highlight-js">import Vue from 'vue';
 import VeeValidate from 'vee-validate';

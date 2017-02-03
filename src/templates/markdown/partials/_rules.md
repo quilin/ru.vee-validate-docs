@@ -1,7 +1,3 @@
-## [Available Rules](#available-rules)
-
-There are more than 20 rules available to validate your inputs:
-
 - [after](rules.html#rule-after)
 - [alpha](rules.html#rule-alpha)
 - [alpha_dash](rules.html#rule-alpha_dash)
@@ -38,5 +34,3 @@ There are more than 20 rules available to validate your inputs:
 - [required](rules.html#rule-required)
 - [size](rules.html#rule-size)
 - [url](rules.html#rule-url)
-
-Visit the [rules documentation](rules.html#available-rules) to learn more about how to use each rule, and how to [create your own](rules.html#custom-rules).

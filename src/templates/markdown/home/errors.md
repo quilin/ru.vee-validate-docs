@@ -11,3 +11,8 @@ The errors object exposes a simple methods to help you render errors:
 - `any()` Checks if there are any errors.
 
 There are a few more [methods](api.html#error-bag) that you can use to manipulate the errors object.
+
+
+## [Available Rules](#available-rules)
+
+There are more than 20 rules available to validate your inputs:

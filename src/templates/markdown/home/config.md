@@ -1,3 +1,5 @@
+Visit the [rules documentation](rules.html#available-rules) to learn more about how to use each rule, and how to [create your own](rules.html#custom-rules).
+
 ## [Configuration](#configuration)
 
 You may need to configure some options to tweak some of the plugin internals, this is not required, but could cause conflicts. For example: if you are using a property called `errors` on your vue instance this may cause conflicts. Here is how you would set up the options along with the default values:

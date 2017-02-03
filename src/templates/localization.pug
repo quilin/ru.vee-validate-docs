@@ -5,3 +5,6 @@ block vars
   -   title: 'Localization | VeeValidate',
   -   description: 'Translation and multi-language support.'
   - };
+
+block content
+  include:markdown-it(linkify langPrefix='highlight-') markdown/localization.md
