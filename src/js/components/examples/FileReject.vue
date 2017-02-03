@@ -53,3 +53,10 @@
         </div>
     </code-example>
 </template>
+
+
+<script>
+    export default {
+        name: 'reject-example'
+    };
+</script>

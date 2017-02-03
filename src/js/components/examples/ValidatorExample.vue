@@ -97,6 +97,7 @@
 import { Validator } from 'vee-validate';
 
 export default {
+    name: 'validator-example',
     validator: null,
     data: () => ({
         email: '',

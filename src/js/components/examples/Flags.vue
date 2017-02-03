@@ -60,6 +60,7 @@
 
 <script>
 export default {
+    name: 'flags-example',
     data: () => ({
         email: ''
     })

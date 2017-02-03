@@ -122,6 +122,7 @@
 
 <script>
 export default {
+    name: 'radio-buttons-example',
     data: () => ({
         radio_group_2: '',
     }),

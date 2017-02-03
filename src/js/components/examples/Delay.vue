@@ -53,3 +53,10 @@
         </div>
     </code-example>
 </template>
+
+
+<script>
+    export default {
+        name: 'delay-example'
+    };
+</script>

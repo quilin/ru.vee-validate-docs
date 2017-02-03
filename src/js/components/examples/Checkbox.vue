@@ -67,6 +67,7 @@
 const terms = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit ';
 
 export default {
+    name: 'checkbox-example',
     data: () => ({
         terms: terms.repeat(20)
     }),

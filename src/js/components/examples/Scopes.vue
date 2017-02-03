@@ -134,6 +134,7 @@
 
 <script>
 export default {
+    name: 'scopes-example',
     methods: {
         validateForm(scope) {
             this.$validator.validateAll(scope).then(result => {

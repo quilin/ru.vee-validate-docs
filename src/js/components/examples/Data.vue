@@ -58,6 +58,7 @@
 
 <script>
 export default {
+    name: 'data-exmaple',
     data: () => ({
         email: '',
         name: ''

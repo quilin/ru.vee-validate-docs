@@ -115,6 +115,7 @@
 
 <script>
 export default {
+    name: 'event-example',
     data: () => ({
         email: '',
         name: '',

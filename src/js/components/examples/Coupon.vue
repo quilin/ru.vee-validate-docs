@@ -107,6 +107,7 @@
 
 <script>
 export default {
+    name: 'coupon-example',
     data: () => ({
         coupon: '',
         price: 100,

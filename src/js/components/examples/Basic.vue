@@ -31,3 +31,9 @@
         </div>
     </code-example>
 </template>
+
+<script>
+    export default {
+        name: 'basic-example'
+    };
+</script>

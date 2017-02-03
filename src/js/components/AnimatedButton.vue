@@ -11,6 +11,7 @@
 
 <script>
     export default {
+        name: 'animated-button',
         props: ['link'],
         data: () => ({
             shown: 'default'

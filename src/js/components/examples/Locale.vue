@@ -79,6 +79,7 @@
 import messages from './../../strings/ar';
 
 export default {
+    name: 'locale-example',
     data: () => ({
         email: '',
         phone: '',
