@@ -13,6 +13,8 @@ There are more than 20 rules available to validate your inputs:
 - [credit_card](rules.html#rule-credit_card)
 - [date_between](rules.html#rule-date_between)
 
+[comment]: #
+
 - [date_format](rules.html#rule-date_format)
 - [decimal](rules.html#rule-decimal)
 - [digits](rules.html#rule-digits)
@@ -24,6 +26,8 @@ There are more than 20 rules available to validate your inputs:
 - [ip](rules.html#rule-ip)
 - [max](rules.html#rule-max)
 
+[comment]: #
+
 - [max_value](rules.html#rule-max_value)
 - [mimes](rules.html#rule-mimes)
 - [min](rules.html#rule-min)
@@ -34,3 +38,5 @@ There are more than 20 rules available to validate your inputs:
 - [required](rules.html#rule-required)
 - [size](rules.html#rule-size)
 - [url](rules.html#rule-url)
+
+Visit the [rules documentation](rules.html#available-rules) to learn more about how to use each rule, and how to [create your own](rules.html#custom-rules).

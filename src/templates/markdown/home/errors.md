@@ -4,11 +4,10 @@ Naturally, you would want to display the errors to your users. The plugin augmen
 
 The errors object exposes a simple methods to help you render errors:
 
-*   `first('field')` Fetches the first error message associated with that field.
-*   `collect('field')` Fetches all error messages associated with that field. alternativly you can pass nothing and it will return errors grouped by fields
-*   `has('field')` Checks if there are any errors associated with that field.
-*   `all()` Gets all error messages.
-*   `any()` Checks if there are any errors.
+- `first('field')` Fetches the first error message associated with that field.
+- `collect('field')` Fetches all error messages associated with that field. alternativly you can pass nothing and it will return errors grouped by fields
+- `has('field')` Checks if there are any errors associated with that field.
+- `all()` Gets all error messages.
+- `any()` Checks if there are any errors.
 
 There are a few more [methods](api.html#error-bag) that you can use to manipulate the errors object.
-

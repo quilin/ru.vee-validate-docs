@@ -11,19 +11,6 @@ Validator.installDateTimeValidators(moment);
 Vue.use(VeeValidate);
 Vue.use(Components);
 
-Validator.extend('verify_coupon', {
-    getMessage: (field) => `The ${field} is not a valid coupon.`,
-    validate: (value) => new Promise(resolve => {
-        const validCoupons = ['SUMMER2016', 'WINTER2016', 'FALL2016'];
-
-        setTimeout(() => {
-            resolve({
-                valid: value && !! ~validCoupons.indexOf(value.toUpperCase())
-            });
-        }, 500);
-    })
-});
-
 new Vue({
     el: '#app',
     data: {
