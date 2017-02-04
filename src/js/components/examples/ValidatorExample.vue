@@ -16,10 +16,12 @@
                 <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
             </p>
         </div>
-        <p class="control">
-            <button class="button is-primary" @click="validateForm" type="button" name="button">Validate All</button>
-            <button class="button is-danger" @click="clearErrors" type="button" name="button">Clear</button>
-        </p>
+        <div class="column is-12">
+            <p class="control">
+                <button class="button is-primary" @click="validateForm" type="button" name="button">Validate All</button>
+                <button class="button is-danger" @click="clearErrors" type="button" name="button">Clear</button>
+            </p>
+        </div>
     </div>
 </template>
 
