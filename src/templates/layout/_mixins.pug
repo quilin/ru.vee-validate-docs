@@ -1,7 +1,13 @@
 -
   function escapeCurly(code) {
-    return code.replace('{{', "{{ '{' + '{'")
-               .replace('}}', "'}' + '}' }}");
+    const regex = /{{ (.+) }}/;
+    if (regex.test(code)) {
+      const binding = code.match(regex)[1];
+      
+      return code.replace(regex, '{{ "{" + "{" + binding + "}" + "}"  }}');
+    }
+
+    return code;
   }
 
 mixin example(path)

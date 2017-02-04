@@ -263,7 +263,7 @@ export default {
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input v-model=&quot;email&quot; name=&quot;email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
             &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ '{' + '{' errors.first('email') '}' + '}' }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
