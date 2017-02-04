@@ -48,7 +48,6 @@
   "dependencies": {
     "axios": "^0.15.3",
     "bulma": "^0.2.1",
-    "collectionsjs": "^0.3.2",
     "font-awesome": "^4.6.3",
     "highlight.js": "^9.7.0",
     "moment": "^2.14.1",

@@ -18,12 +18,12 @@ const isProduction = process.env.NODE_ENV === 'production';
 let config = {
     entry: {
         bundle: path.join(__dirname, 'src/js/main'),
-        vendor: ['vue', 'moment', 'vee-validate', 'collectionsjs', 'axios']
+        vendor: ['vue', 'moment', 'vee-validate', 'axios']
     },
     output: {
         path: path.join(__dirname, 'docs/assets'),
         filename: 'js/[name].js',
-        publicPath: '/assets/'
+        publicPath: 'assets/'
     },
     resolve: {
         alias: {
@@ -87,11 +87,6 @@ let config = {
                 query: {
                     name: 'fonts/[name].[ext]'
                 }
-            },
-            {
-                test: /.json$/,
-                exclude: /node_modules/,
-                loader: 'json-loader'
             },
             {
                 test: /.pug$/,
