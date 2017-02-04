@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:title" content="Examples | VeeValidate"><meta property="og:description" content="Usage and Examples"><meta name="description" content="Usage and Examples"><title>Examples | VeeValidate</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css"><link href="assets/css/bundle.css" rel="stylesheet"></head><body><svg style="display: none;"><symbol id="github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"></path></symbol><symbol id="i-star" viewbox="0 0 32 32"><path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path></symbol><div class="columns is-mobile" id="app"><button :class="{ 'button': true, 'sidebar-button': true, 'is-open': sidebarToggle }" @click="sidebarToggle = ! sidebarToggle" type="button"><span class="icon"><i class="fa fa-bars"></i></span></button><div :class="{ 'column is-2 sidebar-container': true, 'is-open': sidebarToggle }"><aside class="menu sidebar"><animated-button link="https://github.com/logaretm/vee-validate"><div class="flex-div" slot="default"><svg class="icon"><use xlink:href="#github"></use></svg>Star</div><div class="flex-div" slot="hover"><svg class="icon"><use xlink:href="#i-star"></use></svg>{{ stars }}</div></animated-button><p class="menu-label">Getting Started</p><ul class="menu-list"><li><a href="index.html#about">What is vee-validate?</a></li><li><a href="index.html#installation">Installation</a><ul><li><a href="index.html#npm">npm</a></li><li><a href="index.html#bower">bower</a></li><li><a href="index.html#cdn">CDN</a></li></ul></li><li><a href="index.html#basic-example">Basic Example</a></li><li><a href="index.html#render-errors">Rendering Errors</a></li><li><a href="index.html#available-rules">Available Validations</a></li><li><a href="index.html#configuration">Configuration</a></li></ul><p class="menu-label">Validation Rules</p><ul class="menu-list"><li><a href="rules.html#syntax">Syntax</a></li><li><a href="rules.html#available-validations">Available Validations</a></li><li><a href="rules.html#custom-rules">Custom Validations</a></li><li><a href="rules.html#custom-messages">Custom Messages</a></li><li><a href="rules.html#custom-attributes">Custom Attributes</a></li></ul><p class="menu-label">Localization</p><ul class="menu-list"><li><a href="Localization.html#translation">Translation</a></li><li><a href="Localization.html#attributes-data-vv-as">Attributes</a><ul><li><a href="Localization.html#attributes-data-vv-as">data-vv-as</a></li><li><a href="Localization.html#attributes-dictionary">dictionary</a></li></ul></li><li><a href="Localization.html#localized-files">Localized Files</a></li></ul><p class="menu-label">Examples</p><ul class="menu-list"><li><a href="examples.html#debounce-example">Debounce</a></li><li><a href="examples.html#reject-example">Reject Files</a></li><li><a href="examples.html#validate-data-vv-example">Validating Expressions</a></li><li><a href="examples.html#validate-form">Form Validation</a></li><li><a href="examples.html#locale-example">Localized Messages</a></li><li><a href="examples.html#scope-example">Validation Scopes</a></li><li><a href="examples.html#coupon-example">Custom Validation: Coupon</a></li><li><a href="examples.html#radio-buttons-example">Radio Buttons Validation</a></li><li><a href="examples.html#checkbox-example">Checkbox Example</a></li><li><a href="examples.html#flags-example">Validation Flags</a></li><li><a href="examples.html#selectors-example">Error Selectors</a></li><li><a href="examples.html#component-example">Component Validation</a></li><li><a href="examples.html#event-bus-example">Event Bus</a></li></ul><p class="menu-label">API</p><ul class="menu-list"><li><a href="api.html#directive">v-validate</a></li><li><a href="api.html#data-attributes">data-* Attributes</a></li><li><a href="api.html#error-bag">Error Bag</a></li><li><a href="api.html#validator">Validator</a><ul><li><a href="api.html#validator">API</a></li><li><a href="api.html#validator-example">Example</a></li></ul></li></ul></aside></div><div class="column columns is-mobile main-container"><div class="column is-12"><section class="hero"><div class="hero-body"><div class="container has-text-centered"><h1 class="title is-2">Examples </h1><h2 class="subtitle is-4">Usage and Examples</h2></div></div></section><div class="container"><div class="column content-container is-mobile"><h2><a href="#debounce-example">Delayed Validation (Debounced)</a></h2>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:title" content="Examples | VeeValidate"><meta property="og:description" content="Usage and Examples"><meta name="description" content="Usage and Examples"><title>Examples | VeeValidate</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css"><link href="/assets/css/bundle.css" rel="stylesheet"></head><body><svg style="display: none;"><symbol id="github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"></path></symbol><symbol id="i-star" viewbox="0 0 32 32"><path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path></symbol><div class="columns is-mobile" id="app"><button :class="{ 'button': true, 'sidebar-button': true, 'is-open': sidebarToggle }" @click="sidebarToggle = ! sidebarToggle" type="button"><span class="icon"><i class="fa fa-bars"></i></span></button><div class="column is-2 sidebar-container" :class="{ 'column is-2 sidebar-container': true, 'is-open': sidebarToggle }"><aside class="menu sidebar"><animated-button link="https://github.com/logaretm/vee-validate"><div class="flex-div" slot="default"><svg class="icon"><use xlink:href="#github"></use></svg>Star</div><div class="flex-div" slot="hover"><svg class="icon"><use xlink:href="#i-star"></use></svg>{{ stars }}</div></animated-button><p class="menu-label">Getting Started</p><ul class="menu-list"><li><a href="index.html#about">What is vee-validate?</a></li><li><a href="index.html#installation">Installation</a><ul><li><a href="index.html#npm">npm</a></li><li><a href="index.html#bower">bower</a></li><li><a href="index.html#cdn">CDN</a></li></ul></li><li><a href="index.html#basic-example">Basic Example</a></li><li><a href="index.html#render-errors">Rendering Errors</a></li><li><a href="index.html#available-rules">Available Validations</a></li><li><a href="index.html#configuration">Configuration</a></li></ul><p class="menu-label">Validation Rules</p><ul class="menu-list"><li><a href="rules.html#syntax">Syntax</a></li><li><a href="rules.html#available-validations">Available Validations</a></li><li><a href="rules.html#custom-rules">Custom Validations</a></li><li><a href="rules.html#custom-messages">Custom Messages</a></li><li><a href="rules.html#custom-attributes">Custom Attributes</a></li></ul><p class="menu-label">Localization</p><ul class="menu-list"><li><a href="Localization.html#translation">Translation</a></li><li><a href="Localization.html#attributes-data-vv-as">Attributes</a><ul><li><a href="Localization.html#attributes-data-vv-as">data-vv-as</a></li><li><a href="Localization.html#attributes-dictionary">dictionary</a></li></ul></li><li><a href="Localization.html#localized-files">Localized Files</a></li></ul><p class="menu-label">Examples</p><ul class="menu-list"><li><a href="examples.html#debounce-example">Debounce</a></li><li><a href="examples.html#reject-example">Reject Files</a></li><li><a href="examples.html#validate-data-vv-example">Validating Expressions</a></li><li><a href="examples.html#validate-form">Form Validation</a></li><li><a href="examples.html#locale-example">Localized Messages</a></li><li><a href="examples.html#scope-example">Validation Scopes</a></li><li><a href="examples.html#coupon-example">Custom Validation: Coupon</a></li><li><a href="examples.html#radio-buttons-example">Radio Buttons Validation</a></li><li><a href="examples.html#checkbox-example">Checkbox Example</a></li><li><a href="examples.html#flags-example">Validation Flags</a></li><li><a href="examples.html#selectors-example">Error Selectors</a></li><li><a href="examples.html#component-example">Component Validation</a></li><li><a href="examples.html#event-bus-example">Event Bus</a></li></ul><p class="menu-label">API</p><ul class="menu-list"><li><a href="api.html#directive">v-validate</a></li><li><a href="api.html#data-attributes">data-* Attributes</a></li><li><a href="api.html#error-bag">Error Bag</a></li><li><a href="api.html#validator">Validator</a><ul><li><a href="api.html#validator">API</a></li><li><a href="api.html#validator-example">Example</a></li></ul></li></ul></aside></div><div class="column columns is-mobile main-container"><div class="column is-12"><section class="hero"><div class="hero-body"><div class="container has-text-centered"><h1 class="title is-2">Examples </h1><h2 class="subtitle is-4">Usage and Examples</h2></div></div></section><div class="container"><div class="column content-container is-mobile"><h2><a href="#debounce-example">Delayed Validation (Debounced)</a></h2>
 <p>You can specify a delay to debounce the input event, a case scenario that you may want to wait for the user to stop typing then validate the field. This can be achieved by adding a <code>data-vv-delay</code> attribute on the field being validated, and assign it the number of milliseconds you want to wait for.</p>
 <code-example><div slot="example"><delay-example></delay-example></div><div slot="js">export default {
     name: 'delay-example'
@@ -10,7 +10,7 @@
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;email&quot; v-validate=&quot;'required|email'&quot; data-vv-delay=&quot;1000&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
             &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('email') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -37,7 +37,7 @@
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;image&quot; v-validate=&quot;'mimes:image/*'&quot; :class=&quot;{ 'is-danger': errors.has('image') }&quot; type=&quot;file&quot;&gt;
             &lt;i v-show=&quot;errors.has('image')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('image')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('image')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('image')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('image') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -98,7 +98,7 @@
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;email&quot; v-model=&quot;email&quot; v-validate:email.initial=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
             &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('email') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -169,7 +169,7 @@ export default {
 };
 </div><div slot="html">
 &lt;div class=&quot;columns is-rtl is-multiline&quot;&gt;
-    &lt;button @click=&quot;changeLocale&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Change Locale To {{ &quot;{&quot; + &quot;{ &quot; + &quot;nextLocale&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/button&gt;
+    &lt;button @click=&quot;changeLocale&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Change Locale To {{ &quot;{&quot; + &quot;{ nextLocale }&quot; + &quot;}&quot;  }}&lt;/button&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
         &lt;label class=&quot;label&quot;&gt;البريد الاليكتروني (Email)&lt;/label&gt;
         &lt;p class=&quot;control has-icon has-icon-left&quot;&gt;
@@ -213,7 +213,7 @@ export default {
             &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
                 &lt;input name=&quot;email&quot; v-validate=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('form-1.email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
                 &lt;i v-show=&quot;errors.has('form-1.email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-                &lt;span v-show=&quot;errors.has('form-1.email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('form-1.email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+                &lt;span v-show=&quot;errors.has('form-1.email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('form-1.email') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
             &lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;column is-12&quot;&gt;
@@ -277,7 +277,7 @@ export default {
 </div><div slot="html">
 &lt;div class=&quot;columns is-multiline&quot;&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
-        &lt;span :class=&quot;{ 'discounted': discounted }&quot;&gt;Price: {{ &quot;{&quot; + &quot;{ &quot; + &quot;price&quot; + &quot; }&quot; + &quot;}&quot;  }}$&lt;/span&gt;
+        &lt;span :class=&quot;{ 'discounted': discounted }&quot;&gt;Price: {{ &quot;{&quot; + &quot;{ price }&quot; + &quot;}&quot;  }}$&lt;/span&gt;
         &lt;span v-show=&quot;discounted&quot; class=&quot;SeemsGood&quot;&gt;{{ discountedPrice }}$&lt;/span&gt;
     &lt;/div&gt;
     &lt;form @submit.prevent=&quot;applyCoupon&quot; class=&quot;column is-12&quot;&gt;
@@ -332,7 +332,7 @@ export default {
                     Option 3
                 &lt;/label&gt;
             &lt;/p&gt;
-            &lt;span class=&quot;help is-danger&quot; v-show=&quot;errors.has('radio_group_1')&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('radio_group_1')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span class=&quot;help is-danger&quot; v-show=&quot;errors.has('radio_group_1')&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('radio_group_1') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/div&gt;
 
         &lt;div class=&quot;column is-6&quot;&gt;
@@ -386,7 +386,7 @@ export default {
 &lt;div&gt;
     &lt;div class=&quot;terms&quot;&gt;
         &lt;p&gt;
-            {{ &quot;{&quot; + &quot;{ &quot; + &quot;terms&quot; + &quot; }&quot; + &quot;}&quot;  }}
+            {{ &quot;{&quot; + &quot;{ terms }&quot; + &quot;}&quot;  }}
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div&gt;
@@ -455,7 +455,7 @@ this.fields.failed();
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;name&quot; v-validate=&quot;'required|alpha'&quot; :class=&quot;{'input': true, 'is-danger': fields.failed('name'), 'is-success': fields.passed('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
             &lt;i v-show=&quot;fields.failed('name') || fields.passed('name')&quot; :class=&quot;{ 'fa': true, 'fa-warning': fields.failed('name'), 'fa-check': fields.passed('name') }&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;fields.failed('name')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('name')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;fields.failed('name')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('name') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
         &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
@@ -506,7 +506,7 @@ this.fields.failed();
     &lt;div class=&quot;column is-12&quot;&gt;
         &lt;label&gt;&lt;b&gt;Selected Error&lt;/b&gt;&lt;/label&gt;
         &lt;p&gt;
-            {{ &quot;{&quot; + &quot;{ &quot; + &quot;selectedError&quot; + &quot; }&quot; + &quot;}&quot;  }}
+            {{ &quot;{&quot; + &quot;{ selectedError }&quot; + &quot;}&quot;  }}
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -542,7 +542,7 @@ export default {
     &lt;div class=&quot;column is-12&quot;&gt;
         &lt;custom-input v-validate=&quot;'required|email'&quot; data-vv-value-path=&quot;innerValue&quot; data-vv-name=&quot;custom&quot; label=&quot;Email&quot; :has-error=&quot;errors.has('custom')&quot;&gt;
         &lt;/custom-input&gt;
-        &lt;span v-show=&quot;errors.has('custom')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('custom')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
+        &lt;span v-show=&quot;errors.has('custom')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ errors.first('custom') }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;button @click=&quot;validate&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Validate All&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -587,8 +587,21 @@ export default {
 Array.from(document.querySelectorAll('h2')).forEach(h => {
   h.classList.add('title');
   h.classList.add('is-4');
+  var a = h.querySelector('a');
+  if (a) {
+    h.id = a.href.substr(a.href.indexOf('#') + 1);
+  }
 });
 Array.from(document.querySelectorAll('h3')).forEach(h => {
   h.classList.add('title');
   h.classList.add('is-5');
-});</script><script type="text/javascript" src="assets/js/vendor.js"></script><script type="text/javascript" src="assets/js/bundle.js"></script></body></html>
+  var a = h.querySelector('a');
+  if (a) {
+    h.id = a.href.substr(a.href.indexOf('#') + 1);
+  }
+});
+if (location.hash) {
+  var hash = location.hash;
+  location.hash = '';
+  location.hash = hash;
+}</script><script type="text/javascript" src="/assets/js/vendor.js"></script><script type="text/javascript" src="/assets/js/bundle.js"></script></body></html>

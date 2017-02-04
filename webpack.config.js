@@ -23,7 +23,7 @@ let config = {
     output: {
         path: path.join(__dirname, 'docs/assets'),
         filename: 'js/[name].js',
-        publicPath: 'assets/'
+        publicPath: '/assets/'
     },
     resolve: {
         alias: {

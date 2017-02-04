@@ -26,7 +26,7 @@ html
         button(:class="{ 'button': true, 'sidebar-button': true, 'is-open': sidebarToggle }", @click='sidebarToggle = ! sidebarToggle', type='button')
           span.icon
             i.fa.fa-bars
-        div(:class="{ 'column is-2 sidebar-container': true, 'is-open': sidebarToggle }")
+        div(:class="{ 'column is-2 sidebar-container': true, 'is-open': sidebarToggle }" class="column is-2 sidebar-container")
           include _sidemenu.pug
         .column.columns.is-mobile.main-container
           .column.is-12
@@ -46,8 +46,21 @@ html
       Array.from(document.querySelectorAll('h2')).forEach(h => {
         h.classList.add('title');
         h.classList.add('is-4');
+        var a = h.querySelector('a');
+        if (a) {
+          h.id = a.href.substr(a.href.indexOf('#') + 1);
+        }
       });
       Array.from(document.querySelectorAll('h3')).forEach(h => {
         h.classList.add('title');
         h.classList.add('is-5');
+        var a = h.querySelector('a');
+        if (a) {
+          h.id = a.href.substr(a.href.indexOf('#') + 1);
+        }
       });
+      if (location.hash) {
+        var hash = location.hash;
+        location.hash = '';
+        location.hash = hash;
+      }
