@@ -1,18 +1,20 @@
 <template>
     <div class="columns is-multiline">
         <div class="column is-12">
-            <label class="label">Write The Rule Name (required, alpha_spaces, min)</label>
+            <label class="label">Type the selector</label>
             <p class="control">
-                <input v-model="rule" class="input" type="text" placeholder="Rule Name">
+                <input v-model="selector" class="input" type="text" placeholder="Rule Name">
             </p>
         </div>
         <div class="column is-12">
-            <label class="label">The Value</label>
-            <p class="control has-icon has-icon-right">
-                <input name="name" v-validate="'required|alpha_spaces|min:3'" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
-                <i v-show="errors.has(`name${rule ? ':' + rule : ''}`)" class="fa fa-warning"></i>
-                <span v-show="errors.has(`name${rule ? ':' + rule : ''}`)" class="help is-danger">{{ errors.first(`name${rule ? ':' + rule : ''}`) }}</span>
+            <label><b>Selected Error</b></label>
+            <p>
+                {{ selectedError }}
             </p>
+        </div>
+        <div class="column is-12">
+            <label><b>Available Errors:</b></label>
+            <pre>{{ errors }}</pre>
         </div>
     </div>
 </template>
@@ -21,7 +23,23 @@
     export default {
         name: 'selectors-example',
         data: () => ({
-            rule: ''
-        })
+            selector: ''
+        }),
+        computed: {
+            selectedError() {
+                if (! this.selector) {
+                    return 'You did not select any error';
+                }
+
+                return this.errors.first(this.selector) || 'None Found';
+            }
+        },
+        created() {
+            this.errors.add('email', 'Newsletter Email is not valid', 'email', 'newsletter');
+            this.errors.add('email', 'Newsletter Email is required', 'required', 'newsletter');
+
+            this.errors.add('email', 'Email is not a valid email', 'email');
+            this.errors.add('name', 'name is required', 'required');
+        }
     };
 </script>

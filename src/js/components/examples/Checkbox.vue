@@ -30,12 +30,13 @@ export default {
     }),
     methods: {
         nextStep() {
-            this.$validator.validateAll();
-            if (this.errors.any()) {
-                return;
-            }
-            // eslint-disable-next-line
-            alert('You just agreed to conditions without reading it.');
+            this.$validator.validateAll().then(() => {
+                // eslint-disable-next-line
+                alert('You just agreed to conditions without reading it.');
+            }).catch(() => {
+                // eslint-disable-next-line
+                alert('You actually did not agree?');
+            });
         }
     }
 };

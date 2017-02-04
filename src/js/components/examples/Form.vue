@@ -43,7 +43,7 @@
 
 <script>
 export default {
-    name: 'event-example',
+    name: 'form-example',
     data: () => ({
         email: '',
         name: '',
@@ -52,14 +52,12 @@ export default {
     }),
     methods: {
         validateBeforeSubmit() {
-            this.$validator.validateAll().then(success => {
-                if (! success) {
-                    // handle error
-                    return;
-                }
-
+            this.$validator.validateAll().then(() => {
                 // eslint-disable-next-line
                 alert('From Submitted!');
+            }).catch(() => {
+                // eslint-disable-next-line
+                alert('Correct them errors!');
             });
         }
     }

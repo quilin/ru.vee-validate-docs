@@ -54,12 +54,13 @@ export default {
     }),
     methods: {
         validateForm() {
-            this.$validator.validateAll();
-
-            if (! this.errors.any()) {
+            this.$validator.validateAll().then(() => {
                 // eslint-disable-next-line
                 alert('All Passes!');
-            }
+            }).catch(() => {
+                // eslint-disable-next-line
+                alert('Oh NO!');
+            });
         }
     }
 };

@@ -1,10 +1,16 @@
+-
+  function escapeCurly(code) {
+    code.replace('{{', "{{ '{' + '{'")
+        .replace('}}', "'}' + '}' }}");
+  }
+
 mixin example(path)
   code-example
     div(slot="example")
       if block
         block
     div(slot="js")!= require('!!raw-loader!vue-loader/lib/selector?type=script!../js/components/examples/' + path + '.vue').replace(/^[\/\n]*/m,'')
-    div(slot="html")= require('!!raw-loader!vue-loader/lib/selector?type=template!../js/components/examples/' + path + '.vue')
+    div(slot="html")= escapeCurly(require('!!raw-loader!vue-loader/lib/selector?type=template!../js/components/examples/' + path + '.vue'))
   
   mixin note()
     .note

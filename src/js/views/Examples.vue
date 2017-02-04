@@ -160,35 +160,3 @@
 </template>
 
 <script>
-import DelayExample from './../components/examples/Delay.vue';
-import LocaleExample from './../components/examples/Locale.vue';
-import RejectExample from './../components/examples/FileReject.vue';
-import ScopeExample from './../components/examples/Scopes.vue';
-import DataExample from './../components/examples/Data.vue';
-import EventExample from './../components/examples/Event.vue';
-import CouponExample from './../components/examples/Coupon.vue';
-import RadioButtonsExample from './../components/examples/RadioButtons.vue';
-import CheckboxExample from './../components/examples/Checkbox.vue';
-import FlagsExample from './../components/examples/Flags.vue';
-import SelectorsExample from './../components/examples/Selectors.vue';
-import ComponentExample from './../components/examples/Component.vue';
-import EventBusExample from './../components/examples/EventBusParent.vue';
-
-export default {
-    components: {
-        DelayExample,
-        LocaleExample,
-        RejectExample,
-        ScopeExample,
-        DataExample,
-        EventExample,
-        CouponExample,
-        RadioButtonsExample,
-        CheckboxExample,
-        FlagsExample,
-        SelectorsExample,
-        ComponentExample,
-        EventBusExample
-    }
-};
-</script>
