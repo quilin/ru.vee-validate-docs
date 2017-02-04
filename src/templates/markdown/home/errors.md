@@ -1,3 +1,5 @@
+> The field must always have either a `name` or a `data-vv-name` attribute, which both acts as the identifier for that input. The `name` attribute takes precedent. However the name that appears in the error messages can be customized using `data-vv-as` attribute or it can use the [dictionary object](localization.html#dictionary)
+
 ## [Rendering Errors](#render-errors)
 
 Naturally, you would want to display the errors to your users. The plugin augments your Vue instance with a private validator object and a public errors data object. You are responsible for how the errors should be rendered.  
@@ -11,8 +13,3 @@ The errors object exposes a simple methods to help you render errors:
 - `any()` Checks if there are any errors.
 
 There are a few more [methods](api.html#error-bag) that you can use to manipulate the errors object.
-
-
-## [Available Rules](#available-rules)
-
-There are more than 20 rules available to validate your inputs:

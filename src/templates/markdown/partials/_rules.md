@@ -1,3 +1,10 @@
+## [Available Rules](#available-rules)
+
+There are more than 20 rules available to validate your inputs:
+
+<div class="columns is-multiline">
+  <div class="column is-4"> 
+
 - [after](rules.html#rule-after)
 - [alpha](rules.html#rule-alpha)
 - [alpha_dash](rules.html#rule-alpha_dash)
@@ -8,6 +15,10 @@
 - [confirmed](rules.html#rule-confirmed)
 - [credit_card](rules.html#rule-credit_card)
 - [date_between](rules.html#rule-date_between)
+
+  </div>
+
+  <div class="column is-4">
 
 [comment]: #
 
@@ -22,6 +33,11 @@
 - [ip](rules.html#rule-ip)
 - [max](rules.html#rule-max)
 
+
+  </div>
+
+  <div class="column is-4">
+
 [comment]: #
 
 - [max_value](rules.html#rule-max_value)
@@ -34,3 +50,7 @@
 - [required](rules.html#rule-required)
 - [size](rules.html#rule-size)
 - [url](rules.html#rule-url)
+
+
+  </div>
+</div>
