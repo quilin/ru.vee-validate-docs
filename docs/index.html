@@ -40,7 +40,15 @@ Vue.use(VeeValidate);
 <code-example><div slot="example"><basic-example></basic-example></div><div slot="js">export default {
     name: 'basic-example'
 };
-</div><div slot="html"></div></code-example><div class="flex-center"><a href="examples.html">More Examples</a></div><blockquote>
+</div><div slot="html">
+&lt;div class=&quot;column is-12&quot;&gt;
+    &lt;label class=&quot;label&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;p :class=&quot;{ 'control': true }&quot;&gt;
+        &lt;input v-validate=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; name=&quot;email&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+        &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ '{' + '{' errors.first('email') '}' + '}' }}&lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+</div></code-example><div class="flex-center"><a href="examples.html">More Examples</a></div><blockquote>
 <p>The field must always have either a <code>name</code> or a <code>data-vv-name</code> attribute, which both acts as the identifier for that input. The <code>name</code> attribute takes precedent. However the name that appears in the error messages can be customized using <code>data-vv-as</code> attribute or it can use the <a href="localization.html#dictionary">dictionary object</a></p>
 </blockquote>
 <h2><a href="#render-errors">Rendering Errors</a></h2>

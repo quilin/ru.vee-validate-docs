@@ -256,7 +256,32 @@ export default {
         this.$set(this, 'errors', this.validator.errorBag);
     }
 };
-</div><div slot="html"></div></code-example></div></div></div></div></div></svg><script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();
+</div><div slot="html">
+&lt;div class=&quot;columns is-multiline&quot;&gt;
+    &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
+        &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+            &lt;input v-model=&quot;email&quot; name=&quot;email&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+            &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ '{' + '{' errors.first('email') '}' + '}' }}&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;label class=&quot;label&quot;&gt;Name&lt;/label&gt;
+        &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+            &lt;input v-model=&quot;name&quot; name=&quot;name&quot; :class=&quot;{'input': true, 'is-danger': errors.has('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
+            &lt;i v-show=&quot;errors.has('name')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+            &lt;span v-show=&quot;errors.has('name')&quot; class=&quot;help is-danger&quot;&gt;{{ errors.first('name') }}&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;column is-12&quot;&gt;
+        &lt;p class=&quot;control&quot;&gt;
+            &lt;button class=&quot;button is-primary&quot; @click=&quot;validateForm&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Validate All&lt;/button&gt;
+            &lt;button class=&quot;button is-danger&quot; @click=&quot;clearErrors&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Clear&lt;/button&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</div></code-example></div></div></div></div></div></svg><script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();
 Array.from(document.querySelectorAll('h2')).forEach(h => {
   h.classList.add('title');
   h.classList.add('is-4');
