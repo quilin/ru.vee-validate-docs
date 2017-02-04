@@ -5,3 +5,9 @@ block vars
   -   title: 'API | VeeValidate',
   -   description: 'Classes Public API'
   - };
+
+block content
+  include:markdown-it(html=true linkify langPrefix="highlight-") markdown/api.md
+  
+  +example('ValidatorExample')
+    validator-example

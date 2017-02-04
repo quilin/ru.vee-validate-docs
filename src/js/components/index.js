@@ -18,6 +18,7 @@ import FlagsExample from './examples/Flags.vue';
 import SelectorsExample from './examples/Selectors.vue';
 import ComponentExample from './examples/Component.vue';
 import EventBusExample from './examples/EventBusParent.vue';
+import ValidatorExample from './examples/ValidatorExample.vue';
 
 
 export default (Vue) => {
@@ -39,4 +40,5 @@ export default (Vue) => {
     Vue.component(ComponentExample.name, ComponentExample);
     Vue.component(EventBusExample.name, EventBusExample);
     Vue.component(SelectorsExample.name, SelectorsExample);
+    Vue.component(ValidatorExample.name, ValidatorExample);
 };

@@ -1,5 +1,5 @@
 <template>
-    <div slot="example" class="columns is-multiline">
+    <div class="columns is-multiline">
         <div class="column is-12">
             <label class="label">Email</label>
             <p class="control has-icon has-icon-right">
