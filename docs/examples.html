@@ -10,7 +10,7 @@
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;email&quot; v-validate=&quot;'required|email'&quot; data-vv-delay=&quot;1000&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
             &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -37,7 +37,7 @@
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;image&quot; v-validate=&quot;'mimes:image/*'&quot; :class=&quot;{ 'is-danger': errors.has('image') }&quot; type=&quot;file&quot;&gt;
             &lt;i v-show=&quot;errors.has('image')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('image')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('image')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('image')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -98,7 +98,7 @@
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;email&quot; v-model=&quot;email&quot; v-validate:email.initial=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
             &lt;i v-show=&quot;errors.has('email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -169,7 +169,7 @@ export default {
 };
 </div><div slot="html">
 &lt;div class=&quot;columns is-rtl is-multiline&quot;&gt;
-    &lt;button @click=&quot;changeLocale&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Change Locale To {{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/button&gt;
+    &lt;button @click=&quot;changeLocale&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Change Locale To {{ &quot;{&quot; + &quot;{ &quot; + &quot;nextLocale&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/button&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
         &lt;label class=&quot;label&quot;&gt;البريد الاليكتروني (Email)&lt;/label&gt;
         &lt;p class=&quot;control has-icon has-icon-left&quot;&gt;
@@ -213,7 +213,7 @@ export default {
             &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
                 &lt;input name=&quot;email&quot; v-validate=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('form-1.email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
                 &lt;i v-show=&quot;errors.has('form-1.email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
-                &lt;span v-show=&quot;errors.has('form-1.email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+                &lt;span v-show=&quot;errors.has('form-1.email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('form-1.email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
             &lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;column is-12&quot;&gt;
@@ -277,7 +277,7 @@ export default {
 </div><div slot="html">
 &lt;div class=&quot;columns is-multiline&quot;&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
-        &lt;span :class=&quot;{ 'discounted': discounted }&quot;&gt;Price: {{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}$&lt;/span&gt;
+        &lt;span :class=&quot;{ 'discounted': discounted }&quot;&gt;Price: {{ &quot;{&quot; + &quot;{ &quot; + &quot;price&quot; + &quot; }&quot; + &quot;}&quot;  }}$&lt;/span&gt;
         &lt;span v-show=&quot;discounted&quot; class=&quot;SeemsGood&quot;&gt;{{ discountedPrice }}$&lt;/span&gt;
     &lt;/div&gt;
     &lt;form @submit.prevent=&quot;applyCoupon&quot; class=&quot;column is-12&quot;&gt;
@@ -332,7 +332,7 @@ export default {
                     Option 3
                 &lt;/label&gt;
             &lt;/p&gt;
-            &lt;span class=&quot;help is-danger&quot; v-show=&quot;errors.has('radio_group_1')&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span class=&quot;help is-danger&quot; v-show=&quot;errors.has('radio_group_1')&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('radio_group_1')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/div&gt;
 
         &lt;div class=&quot;column is-6&quot;&gt;
@@ -386,7 +386,7 @@ export default {
 &lt;div&gt;
     &lt;div class=&quot;terms&quot;&gt;
         &lt;p&gt;
-            {{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}
+            {{ &quot;{&quot; + &quot;{ &quot; + &quot;terms&quot; + &quot; }&quot; + &quot;}&quot;  }}
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div&gt;
@@ -455,7 +455,7 @@ this.fields.failed();
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
             &lt;input name=&quot;name&quot; v-validate=&quot;'required|alpha'&quot; :class=&quot;{'input': true, 'is-danger': fields.failed('name'), 'is-success': fields.passed('name') }&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;
             &lt;i v-show=&quot;fields.failed('name') || fields.passed('name')&quot; :class=&quot;{ 'fa': true, 'fa-warning': fields.failed('name'), 'fa-check': fields.passed('name') }&quot;&gt;&lt;/i&gt;
-            &lt;span v-show=&quot;fields.failed('name')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+            &lt;span v-show=&quot;fields.failed('name')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('name')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;/p&gt;
         &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
         &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
@@ -506,7 +506,7 @@ this.fields.failed();
     &lt;div class=&quot;column is-12&quot;&gt;
         &lt;label&gt;&lt;b&gt;Selected Error&lt;/b&gt;&lt;/label&gt;
         &lt;p&gt;
-            {{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}
+            {{ &quot;{&quot; + &quot;{ &quot; + &quot;selectedError&quot; + &quot; }&quot; + &quot;}&quot;  }}
         &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column is-12&quot;&gt;
@@ -542,7 +542,7 @@ export default {
     &lt;div class=&quot;column is-12&quot;&gt;
         &lt;custom-input v-validate=&quot;'required|email'&quot; data-vv-value-path=&quot;innerValue&quot; data-vv-name=&quot;custom&quot; label=&quot;Email&quot; :has-error=&quot;errors.has('custom')&quot;&gt;
         &lt;/custom-input&gt;
-        &lt;span v-show=&quot;errors.has('custom')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+        &lt;span v-show=&quot;errors.has('custom')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('custom')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
         &lt;button @click=&quot;validate&quot; type=&quot;button&quot; class=&quot;button is-primary&quot;&gt;Validate All&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;

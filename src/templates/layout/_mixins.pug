@@ -4,7 +4,7 @@
     if (regex.test(code)) {
       const binding = code.match(regex)[1];
       
-      return code.replace(regex, '{{ "{" + "{" + binding + "}" + "}"  }}');
+      return code.replace(regex, `{{ "{" + "{ " + "${binding}" + " }" + "}"  }}`);
     }
 
     return code;

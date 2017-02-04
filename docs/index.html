@@ -45,7 +45,7 @@ Vue.use(VeeValidate);
     &lt;label class=&quot;label&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
     &lt;p :class=&quot;{ 'control': true }&quot;&gt;
         &lt;input v-validate=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('email') }&quot; name=&quot;email&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
-        &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{&quot; + binding + &quot;}&quot; + &quot;}&quot;  }}&lt;/span&gt;
+        &lt;span v-show=&quot;errors.has('email')&quot; class=&quot;help is-danger&quot;&gt;{{ &quot;{&quot; + &quot;{ &quot; + &quot;errors.first('email')&quot; + &quot; }&quot; + &quot;}&quot;  }}&lt;/span&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 </div></code-example><div class="flex-center"><a href="examples.html">More Examples</a></div><blockquote>
