@@ -3,7 +3,7 @@
         <div class="column is-12">
             <label class="label">Name</label>
             <p class="control has-icon has-icon-right">
-                <input name="name" v-validate data-vv-rules="required|alpha" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
+                <input name="name" v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
                 <i v-show="errors.has('name')" class="fa fa-warning"></i>
                 <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
             </p>

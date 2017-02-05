@@ -2,26 +2,45 @@ const path = require('path');
 const merge = require('webpack-merge');
 const poststylus = require('poststylus');
 const webpack = require('webpack');
-const pages = require('./webpack.config.pages.js');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// eslint-disable-next-line
+const page = (name) => {
+    return new HtmlWebpackPlugin({
+        inject: true,
+        template: `src/templates/${name}.pug`,
+        filename: `../${name}.html`
+    });
+};
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 let config = {
     entry: {
         bundle: path.join(__dirname, 'src/js/main'),
-        vendor: ['vue', 'vue-router', 'moment', 'vee-validate', 'collectionsjs', 'axios']
+        vendor: ['vue', 'moment', 'vee-validate', 'axios']
     },
     output: {
         path: path.join(__dirname, 'docs/assets'),
         filename: 'js/[name].js',
         publicPath: '/assets/'
     },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
+    },
     plugins: [
         new webpack.LoaderOptionsPlugin({
             stylus: {
                 use: [poststylus(['autoprefixer'])]
             }
-        })
+        }),
+        page('index'),
+        page('api'),
+        page('examples'),
+        page('rules'),
+        page('localization')
     ],
     module: {
         loaders: [
@@ -70,22 +89,17 @@ let config = {
                 }
             },
             {
-                test: /.json$/,
+                test: /.pug$/,
                 exclude: /node_modules/,
-                loader: 'json-loader'
-            },
-            {
-                test: /.hbs$/,
-                exclude: /node_modules/,
-                loader: 'handlebars-loader'
+                loader: 'pug-loader'
             }
         ]
     }
 };
 
 config = merge(
-    config,
-    isProduction ? require('./webpack.config.prod.js') : require('./webpack.config.dev.js')
+  config,
+  isProduction ? require('./webpack.config.prod.js') : require('./webpack.config.dev.js')
 );
 
-module.exports = merge(config, pages);
+module.exports = config;

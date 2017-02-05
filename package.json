@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "dev": "webpack-dev-server --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack -p"
+    "build": "cross-env NODE_ENV=production webpack -p --progress --hide-modules"
   },
   "keywords": [],
   "author": "",
@@ -25,34 +25,33 @@
     "eslint-loader": "^1.5.0",
     "eslint-plugin-html": "^1.5.3",
     "eslint-plugin-import": "^1.12.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "extract-text-webpack-plugin": "2.0.0-rc.2",
     "file-loader": "^0.9.0",
-    "handlebars": "^4.0.5",
-    "handlebars-loader": "^1.4.0",
     "html-webpack-plugin": "^2.24.0",
+    "jstransformer-markdown-it": "^2.0.0",
     "poststylus": "^0.2.3",
+    "pug": "^2.0.0-beta10",
+    "pug-loader": "^2.3.0",
+    "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",
     "url-loader": "^0.5.7",
     "vue-html-loader": "^1.2.3",
-    "vue-loader": "^10.0.2",
+    "vue-loader": "^10.3.0",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.6",
-    "webpack": "2.2.0-rc.1",
-    "webpack-dev-server": "2.2.0-rc.0",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0",
     "webpack-merge": "^0.14.1"
   },
   "dependencies": {
     "axios": "^0.15.3",
     "bulma": "^0.2.1",
-    "collectionsjs": "^0.3.2",
     "font-awesome": "^4.6.3",
     "highlight.js": "^9.7.0",
-    "json-loader": "^0.5.4",
     "moment": "^2.14.1",
-    "vee-validate": "^2.0.0-beta.18",
-    "vue": "^2.1.6",
-    "vue-router": "^2.1.1"
+    "vee-validate": "^2.0.0-beta.22",
+    "vue": "^2.1.10"
   }
 }
