@@ -26,7 +26,7 @@
             <b>Vue 1.x</b>
             <code-block class="language-bash">bower install vee-validate#1.0.0-beta.11 --save</code-block>
             <b>Vue 2.x</b>
-            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.18 --save</code-block>
+            <code-block class="language-bash">bower install vee-validate#2.0.0-beta.19 --save</code-block>
 
             <h2 id="cdn" class="title is-4"><a href="#cdn">CDN</a></h2>
             Head over to <a href="https://www.jsdelivr.com/projects/vee-validate" target="jsdelivr">jsdelivr</a> and grab the latest version.
@@ -52,17 +52,16 @@
         <p>
             All you need is to add the <code class="inline">v-validate</code> directive to the input you wish to validate.
             <br><br>
-            Then add a <code class="inline">data-vv-rules</code> attribute which contains a list of validation rules separated by a pipe '<code class="inline">|</code>'.
+            Then pass to the directive a <code class="inline">rules</code> string which contains a list of validation rules separated by a pipe '<code class="inline">|</code>'.
             For the following example the validation rules are straight forward, use <code class="inline">required</code> to indicate that the field is required.
             And <code class="inline">email</code> to indicate that the field must be an email.
-            To combine both rules we assign the value <code class="inline">required|email</code> to the <code class="inline">data-vv-rules</code> data-vv-set attribute.
+            To combine both rules we assign the string value <code class="inline">required|email</code> to the <code class="inline">v-validate</code> expression value.
         </p>
         <basic-example></basic-example>
         <div class="flex-center"><router-link class="link" :to="{ name: 'examples' }">More Examples</router-link></div>
         <br>
         <note title="Note">
-            The field name that appears in the error messages is usually the input's <code>name</code> attribute, unless you passed a value from the vue instance <code>$data</code> object,
-            The name will be then the expression name, check the <router-link :to="{ name: 'examples', hash: '#validate-data-vv-example' }">data validation example</router-link>.
+            The field name that appears in the error messages is usually the input's <code>name</code> attribute, you can specify a <code>data-vv-name</code> attribute as an alternative.
         </note>
         <note>
             Its always a good idea to have a <code>name</code> attribute on your fields. If you are not binding the field and do not have a name attribute the validator won't properly register the field.
@@ -106,7 +105,16 @@
                 delay: 0,
                 locale: 'en',
                 dictionary: null,
-                strict: true
+                strict: true,
+                enableAutoClasses: false,
+                classNames: {
+                    touched: 'touched', // the control has been blurred
+                    untouched: 'untouched', // the control hasn't been blurred
+                    valid: 'valid', // model is valid
+                    invalid: 'invalid', // model is invalid
+                    pristine: 'pristine', // control has not been interacted with
+                    dirty: 'dirty' // control has been interacted with
+                }
             };
 
             Vue.use(VeeValidate, config);
@@ -118,6 +126,8 @@
             <li><code class="inline">locale:</code> The default language for the validation messages.</li>
             <li><code class="inline">dictionary:</code> A dictionary to be merged with the validators dictionary, check <router-link class="link" :to="{ name: 'rules', hash: '#custom-messages' }">custom messages</router-link> and <router-link class="link" :to="{ name: 'localization' }">localization</router-link> sections.</li>
             <li><code class="inline">strict:</code> Fields that have no rules will fail validation unless <code class="inline">strict</code> is set to false.</li>
+            <li><code class="inline">enableAutoClasses:</code>Applies automatic classes on inputs or components root elements being validated.</li>
+            <li><code class="inline">classNames:</code>The classes to be applied depending on the state of the input.</li>
         </ul>
     </div>
 </template>

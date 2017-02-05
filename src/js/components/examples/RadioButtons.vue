@@ -6,7 +6,7 @@
                     <legend :class="{ 'error': errors.has('radio_group_1') }">Radio Group 1</legend>
                     <p class="control">
                         <label class="radio">
-                            <input name="radio_group_1" v-validate data-vv-rules="required|in:1,2" value="1" type="radio">
+                            <input name="radio_group_1" v-validate="'required|in:1,2'" value="1" type="radio">
                             Option 1
                         </label>
                         <label class="radio">
@@ -25,7 +25,7 @@
                     <legend :class="{ 'error': errors.has('radio_group_2') }">Radio Group 2 (Bound)</legend>
                     <p class="control">
                         <label class="radio">
-                            <input v-model="radio_group_2" v-validate="radio_group_2" data-vv-rules="required|in:1,2" name="radio_group_2" value="1" type="radio">
+                            <input v-model="radio_group_2" v-validate="{ rules: 'required|in:1,2', arg: 'radio_group_2' }" name="radio_group_2" value="1" type="radio">
                             Option 1
                         </label>
                         <label class="radio">
@@ -53,7 +53,7 @@
                         &lt;legend :class=&quot;{ 'error': errors.has('radio_group_1') }&quot;&gt;Radio Group 1&lt;/legend&gt;
                         &lt;p class=&quot;control&quot;&gt;
                             &lt;label class=&quot;radio&quot;&gt;
-                                &lt;input name=&quot;radio_group_1&quot; v-validate data-vv-rules=&quot;required|in:1,2&quot; value=&quot;1&quot; type=&quot;radio&quot;&gt;
+                                &lt;input name=&quot;radio_group_1&quot; v-validate=&quot;'required|in:1,2'&quot; value=&quot;1&quot; type=&quot;radio&quot;&gt;
                                 Option 1
                             &lt;/label&gt;
                             &lt;label class=&quot;radio&quot;&gt;
@@ -72,7 +72,7 @@
                         &lt;legend :class=&quot;{ 'error': errors.has('radio_group_2') }&quot;&gt;Radio Group 2 (Bound)&lt;/legend&gt;
                         &lt;p class=&quot;control&quot;&gt;
                             &lt;label class=&quot;radio&quot;&gt;
-                                &lt;input v-model=&quot;radio_group_2&quot; v-validate=&quot;radio_group_2&quot; data-vv-rules=&quot;required|in:1,2&quot; name=&quot;radio_group_2&quot; value=&quot;1&quot; type=&quot;radio&quot;&gt;
+                                &lt;input v-model=&quot;radio_group_2&quot; v-validate=&quot;{ rules: 'required|in:1,2', arg: 'radio_group_2' }&quot; name=&quot;radio_group_2&quot; value=&quot;1&quot; type=&quot;radio&quot;&gt;
                                 Option 1
                             &lt;/label&gt;
                             &lt;label class=&quot;radio&quot;&gt;
