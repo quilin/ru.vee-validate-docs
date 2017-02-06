@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const page = (name) => {
     return new HtmlWebpackPlugin({
         inject: true,
-        template: `src/templates/${name}.pug`,
+        template: `src/templates/en/${name}.pug`,
         filename: `../${name}.html`
     });
 };
